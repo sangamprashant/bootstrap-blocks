@@ -1,6 +1,10 @@
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css);
 * {
   margin: 0;
   padding: 0;
+}
+a{
+  text-decoration: none;
 }
 li {
   list-style: none;
@@ -16,11 +20,17 @@ li {
 .web_body .nav_body_default {
   position: fixed;
   overflow-y: scroll;
-  width: 150px;
+  width: 190px;
   padding: 20px;
-  background-color: blueviolet;
   height: 100vh;
   scrollbar-width: none;
+}
+.nav_body_day{
+  background-color: #c2cedbad;
+
+}
+.nav_body_night{
+  background-color: #1a202ccc;
 }
 .web_body .nav_body_default::-webkit-scrollbar {
   width: 0.1em;
@@ -37,8 +47,14 @@ li {
   margin-top: 10px;
 }
 
-.item_container h2 {
+.item_container h5 {
   text-transform: uppercase;
+}
+
+.container_preview {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .item_container img {
@@ -48,14 +64,13 @@ li {
 /* right side */
 .right_body_default {
   margin-left: 190px;
-  background-color: brown;
 }
 .right_body_toggled {
   margin: 0;
 }
 .top_nav {
   position: fixed;
-  background-color: teal;
+  background-color: #22668d;
   height: 60px;
 }
 .top_nav_default {
@@ -75,19 +90,79 @@ li {
   align-items: center;
   padding: 10px;
 }
+.logo {
+  color: white;
+}
 .sub_list div {
   margin: 10px;
 }
-.sub_list_devices{
+.sub_list .code_button {
+  width: 100%;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding: 0 10px;
+  border-radius: 50px;
+  color: white;
+  border: 2px solid rgb(162, 162, 162);
+  white-space: nowrap;
+}
+
+.sub_list .code_button:hover {
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+.sub_list_button {
+  display: flex;
+  gap: 10px;
+}
+
+.sub_list_devices {
   display: flex;
   color: rgb(154, 154, 154);
 }
-.sub_list_devices .active{
+.sub_list_devices .active {
   color: rgb(255, 255, 255);
 }
 
 .svg-container {
-  width: 20px; 
-  height: 20px;
+  width: 20px;
+  /* height: 20px; */
   cursor: pointer;
+}
+
+.main_section {
+  height: 100vh;
+  width: 100%;
+  padding-top: 100px;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+.main_section_default {
+  background-color: #d1d1d180;
+}
+.main_section_toggled {
+  background-color: #13103e81;
+}
+.main_section::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.main_section::-webkit-scrollbar {
+  width: 0.1em;
+}
+.github{
+  padding: 8px 12px;
+    border-radius: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #4a5568;
+    background-color: #4a5568;
+    color: #fff;
+    display: inline-flex;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
 }

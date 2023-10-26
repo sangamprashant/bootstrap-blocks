@@ -2,7 +2,10 @@ import React from "react";
 
 function Laptop(props) {
   return (
-    <div className={`svg-container ${props.active}`} onClick={props.onClick}>
+    <div
+      className={`svg-container ${props.active ? "active" : ""}`}
+      onClick={props.onClick}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

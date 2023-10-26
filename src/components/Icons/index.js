@@ -1,3 +1,6 @@
+import Code from "./Code"
+import Copy from "./Copy"
+import Eye from "./Eye"
 import Laptop from "./Laptop"
 import Left from "./Left"
 import Mobile from "./Mobile"
@@ -15,4 +18,7 @@ export {
     Mobile,
     Laptop,
     Tablet,
+    Code,
+    Eye,
+    Copy,
 }
