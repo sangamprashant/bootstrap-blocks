@@ -3,6 +3,11 @@
   margin: 0;
   padding: 0;
 }
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar {
+  display: none;
+}
 a{
   text-decoration: none;
 }
@@ -165,4 +170,22 @@ li {
     font-weight: 600;
     align-items: center;
     justify-content: center;
+}
+
+.iframe-container {
+  width:100%; /* Adjust the width as needed for the smaller frame */
+  height: 100px; /* Set the height of the iframe container */
+  position: relative;
+  overflow: hidden;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iframe-container iframe {
+  width: 100%; /* Make the iframe content fill its container */
+  height: 100%; /* Make the iframe content fill its container */
+  transform: scale(1); /* Adjust the scale factor to make the content full-screen */
+  transform-origin: top left;
 }
