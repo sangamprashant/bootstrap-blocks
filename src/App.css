@@ -77,6 +77,7 @@ li {
   position: fixed;
   background-color: #22668d;
   height: 60px;
+  z-index: 1;
 }
 .top_nav_default {
   width: calc(100% - 190px);

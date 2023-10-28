@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import ReactDOMServer from "react-dom/server";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { vs2015, docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 import "./App.css";
 import {
@@ -16,20 +17,24 @@ import {
   Toggle,
 } from "./components/Icons";
 import getTemplate from "./components/tamplate";
-console.log(getTemplate);
+import getPreview from "./components/Preview";
 
 const App = () => {
   const [view, setView] = useState("desktop");
   const [sideNav, setSideNav] = useState(false);
   const [isDarkMode, setDarkMode] = useState(false);
   const [viewCode, setViewCode] = useState(false);
+  const [categorySelected, setCategorySelected] = useState("Hero");
+  const [componentSelected, setComponentSelected] = useState("HeroA");
 
   const handelToggle = () => {
     setSideNav(!sideNav);
   };
+
   const handelToggleViewCode = () => {
     setViewCode(!viewCode);
   };
+
   const toggleTheme = () => {
     setDarkMode(!isDarkMode);
     if (!isDarkMode) {
@@ -38,96 +43,83 @@ const App = () => {
       document.body.style.backgroundColor = "";
     }
   };
+
   const handelDesktopView = () => {
     setView("desktop");
   };
+
   const handelTabletView = () => {
     setView("tablet");
   };
+
   const handelMobileView = () => {
     setView("mobile");
   };
+
   const ListRender = () => {
-    return Object.keys(getTemplate({ darkMode: isDarkMode })).map(
-      (category, index) => (
-        <div className="item_container" key={index}>
-          <h5 className={isDarkMode ? "light_text" : "dark_text"}>
-            {category}
-          </h5>
-          <div className="container_preview">
-            {Object.keys(getTemplate({ darkMode: isDarkMode })[category]).map(
-              (component, componentIndex) => (
-                <div
-                  key={componentIndex}
-                  className="iframe-container"
-                >
-                  <iframe
-                    title={component}
-                    className="tablet-screen"
-                    srcDoc={ReactDOMServer.renderToStaticMarkup(
-                      getTemplate({ darkMode: isDarkMode })[category][component]
-                    )}
-                  ></iframe>
-                </div>
-              )
-            )}
-          </div>
+    return Object.keys(getPreview({ darkMode: isDarkMode })).map((category, index) => (
+      <div className="item_container" key={index}>
+        <h5 className={isDarkMode ? "light_text" : "dark_text"}>{category}</h5>
+        <div className="container_preview">
+          {Object.keys(getPreview({ darkMode: isDarkMode })[category]).map((component, componentIndex) => (
+            <div key={componentIndex} className="iframe-container">
+              <button className="tablet-screen" onClick={() => handelElementBound(category, component)}>
+                {getPreview({ darkMode: isDarkMode })[category][component]}
+              </button>
+            </div>
+          ))}
         </div>
-      )
-    );
+      </div>
+    ));
   };
-  
+
+  const handelElementBound = (category, component) => {
+    setCategorySelected(category);
+    setComponentSelected(component);
+  };
+
+  const beautifyHTML = (codeStr) => {
+    let div = document.createElement('div');
+    div.innerHTML = codeStr.trim();
+    return format(div, 0).innerHTML.trim();
+  };
+
+  const format = (node, level) => {
+    let indentBefore = new Array(level++ + 1).join('  '),
+      indentAfter = new Array(level - 1).join('  '),
+      textNode;
+
+    for (let i = 0; i < node.children.length; i++) {
+      textNode = document.createTextNode('\n' + indentBefore);
+      node.insertBefore(textNode, node.children[i]);
+
+      format(node.children[i], level);
+
+      if (node.lastElementChild === node.children[i]) {
+        textNode = document.createTextNode('\n' + indentAfter);
+        node.appendChild(textNode);
+      }
+    }
+
+    return node;
+  };
+
+  // Get the source code of the selected React component
+  const componentSourceCode = getTemplate({ darkMode: isDarkMode })[categorySelected][componentSelected]
+  console.log("Component Source Code:", componentSourceCode);
+
 
   return (
     <div className="web_body">
-      <div
-        className={`${sideNav ? "nav_body_toggled" : "nav_body_default"} ${
-          !isDarkMode ? "nav_body_day" : "nav_body_night"
-        }`}
-      >
-        {/* {Object.keys(getTemplate({ darkMode: isDarkMode })).map(
-          (category, index) => (
-            <div className="item_container" key={index}>
-              <h5 className={isDarkMode ? "light_text" : "dark_text"}>
-                {category}
-              </h5>
-              <div className="container_preview">
-                {Object.keys(
-                  getTemplate({ darkMode: isDarkMode })[category]
-                ).map((component, componentIndex) => (
-                  <iframe
-                    key={componentIndex}
-                    width="100%"
-                    height="100"
-                    title={component}
-                    className="tablet-screen"
-                    srcDoc={ReactDOMServer.renderToStaticMarkup(
-                      getTemplate({ darkMode: isDarkMode })[category][component]
-                    )}
-                  ></iframe>
-                ))}
-              </div>
-            </div>
-          )
-        )} */}
+      <div className={`${sideNav ? "nav_body_toggled" : "nav_body_default"} ${!isDarkMode ? "nav_body_day" : "nav_body_night"}`}>
         {ListRender()}
       </div>
 
-      <div
-        className={`${sideNav ? "right_body_toggled" : "right_body_default"}`}
-      >
-        <div
-          className={`top_nav ${
-            sideNav ? "top_nav_toggled" : "top_nav_default"
-          }`}
-        >
+      <div className={`${sideNav ? "right_body_toggled" : "right_body_default"}`}>
+        <div className={`top_nav ${sideNav ? "top_nav_toggled" : "top_nav_default"}`}>
           <div className="nav_items">
             <div className="sub_list logo">
-              {sideNav ? (
-                <Toggle onClick={() => handelToggle()} />
-              ) : (
-                <Left onClick={() => handelToggle()} />
-              )}
+              {sideNav ? <Toggle onClick={() => handelToggle()} /> : <Left onClick={() => handelToggle()} />}
               <h3>APP NAME</h3>
             </div>
             <div className="sub_list">
@@ -138,54 +130,42 @@ const App = () => {
                   </button>
                 )}
                 {viewCode && (
-                  <button
-                    className="code_button"
-                    onClick={handelToggleViewCode}
-                  >
+                  <button className="code_button" onClick={handelToggleViewCode}>
                     <Eye /> preview
                   </button>
                 )}
                 {!viewCode && (
-                  <button
-                    className="code_button"
-                    onClick={handelToggleViewCode}
-                  >
+                  <button className="code_button" onClick={handelToggleViewCode}>
                     <Code /> View code
                   </button>
                 )}
               </div>
               <div className="sub_list_devices">
-                <Laptop
-                  active={view === "desktop"}
-                  onClick={handelDesktopView}
-                />
+                <Laptop active={view === "desktop"} onClick={handelDesktopView} />
                 <Tablet active={view === "tablet"} onClick={handelTabletView} />
                 <Mobile active={view === "mobile"} onClick={handelMobileView} />
-                {isDarkMode ? (
-                  <Sun active="active" onClick={toggleTheme} />
-                ) : (
-                  <Moon active="active" onClick={toggleTheme} />
-                )}
+                {isDarkMode ? <Sun active="active" onClick={toggleTheme} /> : <Moon active="active" onClick={toggleTheme} />}
               </div>
             </div>
           </div>
         </div>
-        <div
-          className={`main_section ${
-            !isDarkMode ? "main_section_default" : "main_section_toggled"
-          }`}
-        >
-          {Object.keys(getTemplate({ darkMode: isDarkMode })).map((category) =>
-            Object.keys(getTemplate({ darkMode: isDarkMode })[category]).map(
-              (component) =>
-                getTemplate({ darkMode: isDarkMode })[category][component]
-            )
+        <div className={`main_section ${!isDarkMode ? "main_section_default" : "main_section_toggled"}`}>
+          {getTemplate({ darkMode: isDarkMode })[categorySelected][componentSelected]}
+          {viewCode && (
+            <pre>
+              <code>
+                <SyntaxHighlighter language="jsx" style={isDarkMode ? vs2015 : docco} showLineNumbers>
+                  {beautifyHTML((getTemplate({ darkMode: isDarkMode })[categorySelected][componentSelected]).toString())}
+                  
+                </SyntaxHighlighter>
+              </code>
+            </pre>
           )}
         </div>
       </div>
 
-      <a className="github" href="/" target="_blank">
-        sdg
+      <a className="github" href="https://github.com/sangamprashant/bootstrap-blocks" target="_blank">
+        GitHub
       </a>
     </div>
   );
