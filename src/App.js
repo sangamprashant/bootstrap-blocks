@@ -2,24 +2,16 @@ import React from "react";
 import { useState } from "react";
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { vs2015, docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import Frame from 'react-frame-component';
 
 import "./App.css";
-import {
-  Code,
-  Copy,
-  Eye,
-  Laptop,
-  Left,
-  Mobile,
-  Moon,
-  Sun,
-  Tablet,
-  Toggle,
-} from "./components/Icons";
+import {Code,Copy,Eye,Laptop,Left,Mobile,Moon,Sun,Tablet,Toggle,} from "./components/Icons";
 import getTemplate from "./components/tamplate";
 import getPreview from "./components/Preview";
 
 const App = () => {
+  const [reference,setReference] = useState(React.createRef())
+  const [componentCode,setComponentCode] = useState("")
   const [view, setView] = useState("desktop");
   const [sideNav, setSideNav] = useState(false);
   const [isDarkMode, setDarkMode] = useState(false);
@@ -104,10 +96,13 @@ const App = () => {
     return node;
   };
 
-  // Get the source code of the selected React component
-  const componentSourceCode = getTemplate({ darkMode: isDarkMode })[categorySelected][componentSelected]
-  console.log("Component Source Code:", componentSourceCode);
-
+  const handleContentDidMount = () => {
+    const iframe = document.querySelector('iframe');
+    // iframe.contentWindow.document.addEventListener('keydown', this.keyboardNavigation);
+    // iframe.contentWindow.document.addEventListener('click', () => this.setState({ sidebar: false }));
+console.log((reference).innerHTML.toString())
+setComponentCode((reference).innerHTML.toString())
+  }
 
   return (
     <div className="web_body">
@@ -149,14 +144,34 @@ const App = () => {
             </div>
           </div>
         </div>
+        <div className="markup" ref={setReference}>{getTemplate({ darkMode: isDarkMode })[categorySelected][componentSelected]}</div>
         <div className={`main_section ${!isDarkMode ? "main_section_default" : "main_section_toggled"}`}>
-          {getTemplate({ darkMode: isDarkMode })[categorySelected][componentSelected]}
+          {!viewCode&&<Frame
+          contentDidMount={handleContentDidMount}
+          head={
+                <>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+                {
+                  <style dangerouslySetInnerHTML={{__html:
+                    `img { filter:
+                      ${isDarkMode ?
+                        'invert(1) opacity(.5); mix-blend-mode: luminosity; }'
+                        :
+                        'sepia(1) hue-rotate(190deg) opacity(.46) grayscale(.7) }'
+                      }`
+                    }}
+                  />
+                }
+                </>
+              }
+          >
+            {getTemplate({ darkMode: isDarkMode })[categorySelected][componentSelected]}
+          </Frame>}
           {viewCode && (
             <pre>
               <code>
                 <SyntaxHighlighter language="jsx" style={isDarkMode ? vs2015 : docco} showLineNumbers>
-                  {beautifyHTML((getTemplate({ darkMode: isDarkMode })[categorySelected][componentSelected]).toString())}
-                  
+                  {beautifyHTML(componentCode)}
                 </SyntaxHighlighter>
               </code>
             </pre>
