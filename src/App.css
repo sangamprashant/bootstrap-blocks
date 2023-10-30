@@ -8,7 +8,7 @@
 ::-webkit-scrollbar {
   display: none;
 }
-a{
+a {
   text-decoration: none;
 }
 li {
@@ -30,11 +30,10 @@ li {
   height: 100vh;
   scrollbar-width: none;
 }
-.nav_body_day{
+.nav_body_day {
   background-color: #c2cedbad;
-
 }
-.nav_body_night{
+.nav_body_night {
   background-color: #1a202ccc;
 }
 .web_body .nav_body_default::-webkit-scrollbar {
@@ -158,29 +157,31 @@ li {
 .main_section::-webkit-scrollbar {
   width: 0.1em;
 }
-.main_section iframe{
+.main_section iframe {
   width: 100%;
   height: 100%;
   background-color: transparent;
 }
+.main_section iframe body {
+  background-color: transparent;
+}
 
-.github{
+.github {
   padding: 8px 12px;
-    border-radius: 50px;
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background-color: #4a5568;
-    background-color: #4a5568;
-    color: #fff;
-    display: inline-flex;
-    font-weight: 600;
-    align-items: center;
-    justify-content: center;
+  border-radius: 50px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #fff;
+  color: #4a5568;
+  display: inline-flex;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
 }
 
 .iframe-container {
-  width:100%; /* Adjust the width as needed for the smaller frame */
+  width: 100%; /* Adjust the width as needed for the smaller frame */
   height: 100px; /* Set the height of the iframe container */
   position: relative;
   overflow: hidden;
@@ -193,10 +194,11 @@ li {
 .iframe-container iframe {
   width: 100%; /* Make the iframe content fill its container */
   height: 100%; /* Make the iframe content fill its container */
-  transform: scale(1); /* Adjust the scale factor to make the content full-screen */
+  transform: scale(
+    1
+  ); /* Adjust the scale factor to make the content full-screen */
   transform-origin: top left;
 }
-
 
 .markup {
   display: none;

@@ -5,7 +5,7 @@ import { vs2015, docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Frame from 'react-frame-component';
 
 import "./App.css";
-import {Code,Copy,Eye,Laptop,Left,Mobile,Moon,Sun,Tablet,Toggle,} from "./components/Icons";
+import {Code,Copy,Eye,GitHub,Laptop,Left,Mobile,Moon,Sun,Tablet,Toggle,} from "./components/Icons";
 import getTemplate from "./components/tamplate";
 import getPreview from "./components/Preview";
 
@@ -68,6 +68,7 @@ const App = () => {
   const handelElementBound = (category, component) => {
     setCategorySelected(category);
     setComponentSelected(component);
+    setViewCode(false)
   };
 
   const beautifyHTML = (codeStr) => {
@@ -97,12 +98,37 @@ const App = () => {
   };
 
   const handleContentDidMount = () => {
-    const iframe = document.querySelector('iframe');
+    const iframe = document.querySelector("iframe");
+    const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
     // iframe.contentWindow.document.addEventListener('keydown', this.keyboardNavigation);
     // iframe.contentWindow.document.addEventListener('click', () => this.setState({ sidebar: false }));
-console.log((reference).innerHTML.toString())
-setComponentCode((reference).innerHTML.toString())
-  }
+  
+    // Set the content of the iframe
+    iframeDocument.open();
+    iframeDocument.write(reference.innerHTML);
+  
+    // Add a link to load the complete Bootstrap CSS within the iframe
+    const bootstrapLink = iframeDocument.createElement("link");
+    bootstrapLink.rel = "stylesheet";
+    bootstrapLink.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css";
+    iframeDocument.head.appendChild(bootstrapLink);
+
+    // Add custom CSS within the iframe
+    const styleElement = iframeDocument.createElement("style");
+    styleElement.innerHTML = `
+      /* Add your custom CSS rules here */
+      body {
+        background-color: transparent;
+        padding:0 20px;
+      }
+      /* Additional styles... */
+    `;
+    iframeDocument.head.appendChild(styleElement);
+  
+    iframeDocument.close();
+  
+    setComponentCode(reference.innerHTML.toString());
+  };
 
   return (
     <div className="web_body">
@@ -147,24 +173,27 @@ setComponentCode((reference).innerHTML.toString())
         <div className="markup" ref={setReference}>{getTemplate({ darkMode: isDarkMode })[categorySelected][componentSelected]}</div>
         <div className={`main_section ${!isDarkMode ? "main_section_default" : "main_section_toggled"}`}>
           {!viewCode&&<Frame
-          contentDidMount={handleContentDidMount}
-          head={
-                <>
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-                {
-                  <style dangerouslySetInnerHTML={{__html:
-                    `img { filter:
-                      ${isDarkMode ?
-                        'invert(1) opacity(.5); mix-blend-mode: luminosity; }'
-                        :
-                        'sepia(1) hue-rotate(190deg) opacity(.46) grayscale(.7) }'
-                      }`
-                    }}
-                  />
-                }
-                </>
-              }
-          >
+            contentDidMount={handleContentDidMount}
+            head={
+            <>
+              <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+              />
+              <style dangerouslySetInnerHTML={{
+                __html: `
+                  img {
+                    filter: ${isDarkMode
+                      ? 'invert(1) opacity(.5); mix-blend-mode: luminosity;'
+                      : 'sepia(1) hue-rotate(190deg) opacity(.46) grayscale(.7);'
+                    }
+                  }
+                `,
+              }}
+              />
+            </>
+              }       
+            >
             {getTemplate({ darkMode: isDarkMode })[categorySelected][componentSelected]}
           </Frame>}
           {viewCode && (
@@ -180,7 +209,7 @@ setComponentCode((reference).innerHTML.toString())
       </div>
 
       <a className="github" href="https://github.com/sangamprashant/bootstrap-blocks" target="_blank">
-        GitHub
+      <GitHub/>GitHub
       </a>
     </div>
   );
