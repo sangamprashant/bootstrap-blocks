@@ -179,6 +179,7 @@ const App = () => {
     toast.info("code copied.")
 }
 
+console.log(window.location)
   return (
     <div className="web_body">
       <div className={`${sideNav ? "nav_body_toggled" : "nav_body_default"} ${!isDarkMode ? "nav_body_day" : "nav_body_night"}`}>
@@ -189,7 +190,7 @@ const App = () => {
           <div className="nav_items">
             <div className="sub_list logo">
               {sideNav ? <Toggle onClick={() => handelToggle()} /> : <Left onClick={() => handelToggle()} />}
-              <img height="50" src="./logowobg.png"/>
+              <img height="50" src={`${window.location.origin}/navblue.png`}/>
               <h3>BOOTSTRAPFINDS </h3>
             </div>
             {TopNavOption()}
