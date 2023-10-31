@@ -42,6 +42,9 @@ li {
 .nav_body_toggled {
   display: none;
 }
+.nav_button_night{
+  background-color: #13103e81;
+}
 
 .web_body .nav_body_default::-webkit-scrollbar-thumb {
   background-color: transparent;
@@ -140,7 +143,6 @@ li {
 
 .main_section {
   height: 100vh;
-  width: 100%;
   padding-top: 100px;
   scrollbar-width: none;
   overflow-y: scroll;
@@ -189,17 +191,22 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.iframe-container iframe {
-  width: 100%; /* Make the iframe content fill its container */
-  height: 100%; /* Make the iframe content fill its container */
-  transform: scale(
-    1
-  ); /* Adjust the scale factor to make the content full-screen */
-  transform-origin: top left;
+  background-color: black;
 }
 
 .markup {
   display: none;
+}
+
+.desktop{
+  min-width: 992px;
+  overflow-x: scroll;
+}
+.desktop{
+  min-width: 992px;
+  overflow-x: scroll;
+}
+.desktop{
+  min-width: 992px;
+  overflow-x: scroll;
 }

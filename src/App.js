@@ -3,6 +3,8 @@ import { useState } from "react";
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { vs2015, docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Frame from 'react-frame-component';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./App.css";
 import {Code,Copy,Eye,GitHub,Laptop,Left,Mobile,Moon,Sun,Tablet,Toggle,} from "./components/Icons";
@@ -55,7 +57,7 @@ const App = () => {
         <div className="container_preview">
           {Object.keys(getPreview({ darkMode: isDarkMode })[category]).map((component, componentIndex) => (
             <div key={componentIndex} className="iframe-container">
-              <button className="tablet-screen" onClick={() => handelElementBound(category, component)}>
+              <button className={`tablet-screen ${isDarkMode?"nav_button_night":""}`} onClick={() => handelElementBound(category, component)}>
                 {getPreview({ darkMode: isDarkMode })[category][component]}
               </button>
             </div>
@@ -130,6 +132,23 @@ const App = () => {
     setComponentCode(reference.innerHTML.toString());
   };
 
+  const copyToClipboard =()=> {
+    const code = beautifyHTML(componentCode);
+    
+    // Create a textarea element and set its value to the code
+    const input = document.createElement('textarea');
+    input.value = code;
+    document.body.appendChild(input);
+    
+    // Select the textarea and execute the copy command
+    input.select();
+    document.execCommand('copy');
+    
+    // Remove the textarea element
+    document.body.removeChild(input);
+    toast.info("code copied.")
+}
+
   return (
     <div className="web_body">
       <div className={`${sideNav ? "nav_body_toggled" : "nav_body_default"} ${!isDarkMode ? "nav_body_day" : "nav_body_night"}`}>
@@ -141,12 +160,12 @@ const App = () => {
           <div className="nav_items">
             <div className="sub_list logo">
               {sideNav ? <Toggle onClick={() => handelToggle()} /> : <Left onClick={() => handelToggle()} />}
-              <h3>APP NAME</h3>
+              <h3>BOOTSTRAPFINDS </h3>
             </div>
             <div className="sub_list">
               <div className="sub_list_button">
                 {viewCode && (
-                  <button className="code_button">
+                  <button className="code_button"onClick={()=>copyToClipboard()} >
                     <Copy /> copy to clipboard
                   </button>
                 )}
@@ -171,7 +190,7 @@ const App = () => {
           </div>
         </div>
         <div className="markup" ref={setReference}>{getTemplate({ darkMode: isDarkMode })[categorySelected][componentSelected]}</div>
-        <div className={`main_section ${!isDarkMode ? "main_section_default" : "main_section_toggled"}`}>
+        <div className={`main_section ${!isDarkMode ? "main_section_default" : "main_section_toggled"} ${view==="desktop"?"desktop":view==="tablet"?"tablet":view==="mobile"?"mobile":""}`}>
           {!viewCode&&<Frame
             contentDidMount={handleContentDidMount}
             head={
@@ -207,10 +226,10 @@ const App = () => {
           )}
         </div>
       </div>
-
-      <a className="github" href="https://github.com/sangamprashant/bootstrap-blocks" target="_blank">
+      <a className="github" href="https://github.com/sangamprashant/bootstrap-blocks" target="_blank" rel="noreferrer">
       <GitHub/>GitHub
       </a>
+      <ToastContainer theme="colored" />
     </div>
   );
 };
