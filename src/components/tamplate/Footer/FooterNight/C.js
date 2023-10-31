@@ -1,12 +1,18 @@
 import React from "react";
 
-function FooterNightB() {
+function FooterNightC() {
   return (
-    <footer className="bg-dark text-white text-center py-4">
+    <footer className="bg-dark text-white py-5">
       <div className="container">
         <div className="row">
           <div className="col-md-4">
-            <h5>About Us</h5>
+            <img
+              src={`${window.location.origin}/navblue.png`}
+              alt="Your Logo"
+              height="100"
+              width="100"
+              className="img-fluid mb-3"
+            />
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
           <div className="col-md-4">
@@ -37,12 +43,15 @@ function FooterNightB() {
           </div>
         </div>
       </div>
-      <hr />
-      <p className="text-center">
-        &copy; {new Date().getFullYear} BOOTSTRAPFINDS. All rights reserved.
-      </p>
+      <hr className="mt-5" />
+      <div className="text-center">
+        <p>
+          &copy; {new Date().getFullYear()} Your Website Name. All rights
+          reserved.
+        </p>
+      </div>
     </footer>
   );
 }
 
-export default FooterNightB;
+export default FooterNightC;

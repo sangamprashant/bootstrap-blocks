@@ -2,101 +2,31 @@ import React from "react";
 
 function HeroDayA() {
   return (
-    <div>
-      <h1 className="text-black">Header day A</h1>
-
-      <form class="row g-3 needs-validation" novalidate>
-        <div class="col-md-4 position-relative">
-          <label for="validationTooltip01" class="form-label">
-            First name
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            id="validationTooltip01"
-            value="Mark"
-            required
-          />
-          <div class="valid-tooltip">Looks good!</div>
-        </div>
-        <div class="col-md-4 position-relative">
-          <label for="validationTooltip02" class="form-label">
-            Last name
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            id="validationTooltip02"
-            value="Otto"
-            required
-          />
-          <div class="valid-tooltip">Looks good!</div>
-        </div>
-        <div class="col-md-4 position-relative">
-          <label for="validationTooltipUsername" class="form-label">
-            Username
-          </label>
-          <div class="input-group has-validation">
-            <span
-              class="input-group-text"
-              id="validationTooltipUsernamePrepend"
-            >
-              @
-            </span>
-            <input
-              type="text"
-              class="form-control"
-              id="validationTooltipUsername"
-              aria-describedby="validationTooltipUsernamePrepend"
-              required
-            />
-            <div class="invalid-tooltip">
-              Please choose a unique and valid username.
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 position-relative">
-          <label for="validationTooltip03" class="form-label">
-            City
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            id="validationTooltip03"
-            required
-          />
-          <div class="invalid-tooltip">Please provide a valid city.</div>
-        </div>
-        <div class="col-md-3 position-relative">
-          <label for="validationTooltip04" class="form-label">
-            State
-          </label>
-          <select class="form-select" id="validationTooltip04" required>
-            <option selected disabled value="">
-              Choose...
-            </option>
-            <option>...</option>
-          </select>
-          <div class="invalid-tooltip">Please select a valid state.</div>
-        </div>
-        <div class="col-md-3 position-relative">
-          <label for="validationTooltip05" class="form-label">
-            Zip
-          </label>
-          <input
-            type="text"
-            class="form-control"
-            id="validationTooltip05"
-            required
-          />
-          <div class="invalid-tooltip">Please provide a valid zip.</div>
-        </div>
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit">
-            Submit form
+    <div class="px-4 py-5 my-5 text-center">
+      <img
+        class="d-block mx-auto mb-4"
+        src={`${window.location.origin}/navblue.png`}
+        alt=""
+        width="72"
+        height="72"
+      />
+      <h1 class="display-5 fw-bold">Centered hero</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">
+          Quickly design and customize responsive mobile-first sites with
+          Bootstrap, the world’s most popular front-end open source toolkit,
+          featuring Sass variables and mixins, responsive grid system, extensive
+          prebuilt components, and powerful JavaScript plugins.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <button type="button" class="btn btn-primary btn-lg px-4 gap-3">
+            Primary button
+          </button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+            Secondary
           </button>
         </div>
-      </form>
+      </div>
     </div>
   );
 }

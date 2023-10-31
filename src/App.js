@@ -51,13 +51,16 @@ const App = () => {
   };
 
   const ListRender = () => {
-    return Object.keys(getPreview({ darkMode: isDarkMode })).map((category, index) => (
+    const categories = Object.keys(getPreview({ darkMode: isDarkMode })).sort();
+    categories.reverse();
+  
+    return categories.map((category, index) => (
       <div className="item_container" key={index}>
         <h5 className={isDarkMode ? "light_text" : "dark_text"}>{category}</h5>
         <div className="container_preview">
           {Object.keys(getPreview({ darkMode: isDarkMode })[category]).map((component, componentIndex) => (
             <div key={componentIndex} className="iframe-container">
-              <button className={`tablet-screen ${isDarkMode?"nav_button_night":""} ${(categorySelected===category&& componentSelected===component)?"active":"" } `} onClick={() => handelElementBound(category, component)}>
+              <button className={`tablet-screen ${isDarkMode ? "nav_button_night" : ""} ${(categorySelected === category && componentSelected === component) ? "active" : ""}`} onClick={() => handelElementBound(category, component)}>
                 {getPreview({ darkMode: isDarkMode })[category][component]}
               </button>
             </div>
@@ -132,8 +135,6 @@ const App = () => {
   const handleContentDidMount = () => {
     const iframe = document.querySelector("iframe");
     const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-    // iframe.contentWindow.document.addEventListener('keydown', this.keyboardNavigation);
-    // iframe.contentWindow.document.addEventListener('click', () => this.setState({ sidebar: false }));
   
     // Set the content of the iframe
     iframeDocument.open();
@@ -179,7 +180,6 @@ const App = () => {
     toast.info("code copied.")
 }
 
-console.log(window.location)
   return (
     <div className="web_body">
       <div className={`${sideNav ? "nav_body_toggled" : "nav_body_default"} ${!isDarkMode ? "nav_body_day" : "nav_body_night"}`}>

@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
 
 function FooterDayA() {
   return (
     <div>
-      <h1 className='text-black'>footer day A</h1>
+      <footer className="bg-light text-dark text-center py-3">
+        <div className="container">
+          <p>&copy; 2023 BOOTSTRAPFINDS</p>
+        </div>
+      </footer>
     </div>
-  )
+  );
 }
 
-export default FooterDayA
+export default FooterDayA;

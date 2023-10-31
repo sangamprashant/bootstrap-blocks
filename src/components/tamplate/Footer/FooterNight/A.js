@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
 
 function FooterNightA() {
   return (
     <div>
-       <h1 className='text-white'>footer night A</h1>
+      <footer className="bg-dark text-light text-center py-3">
+        <div className="container">
+          <p>&copy; 2023 BOOTSTRAPFINDS</p>
+        </div>
+      </footer>
     </div>
-  )
+  );
 }
 
-export default FooterNightA
+export default FooterNightA;
