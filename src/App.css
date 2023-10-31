@@ -14,6 +14,9 @@ a {
 li {
   list-style: none;
 }
+code {
+  background: transparent;
+}
 
 .light_text {
   color: white;
@@ -42,8 +45,16 @@ li {
 .nav_body_toggled {
   display: none;
 }
-.nav_button_night{
+.nav_button_night {
   background-color: #13103e81;
+}
+.tablet-screen {
+  border: none;
+}
+
+.tablet-screen.active {
+  border: 3px solid;
+  border-color: #22668d;
 }
 
 .web_body .nav_body_default::-webkit-scrollbar-thumb {
@@ -69,8 +80,15 @@ li {
   height: 90px;
 }
 /* right side */
+.right_body_day {
+  background-color: #d1d1d180;
+}
+.right_body_night {
+  background-color: #13103e81;
+}
 .right_body_default {
   margin-left: 190px;
+  margin-right: -190px;
 }
 .right_body_toggled {
   margin: 0;
@@ -141,17 +159,32 @@ li {
   cursor: pointer;
 }
 
+.right_content {
+  padding-top: 100px;
+}
+.preview_container{
+  display: flex;
+  justify-content: center;
+}
+.prview_default {
+ width: calc(100% - 190px);
+}
+.prview_toggled{
+  width: 100%;
+}
+
 .main_section {
   height: 100vh;
-  padding-top: 100px;
   scrollbar-width: none;
   overflow-y: scroll;
 }
 .main_section_default {
-  background-color: #d1d1d180;
+  /* background-color: #d1d1d180; */
+  width: calc(100% - 190px);
 }
 .main_section_toggled {
-  background-color: #13103e81;
+  /* background-color: #13103e81; */
+  width: 100%;
 }
 .main_section::-webkit-scrollbar-thumb {
   background-color: transparent;
@@ -198,15 +231,12 @@ li {
   display: none;
 }
 
-.desktop{
+.desktop {
   min-width: 992px;
-  overflow-x: scroll;
 }
-.desktop{
-  min-width: 992px;
-  overflow-x: scroll;
+.tablet {
+  max-width: 768px;
 }
-.desktop{
-  min-width: 992px;
-  overflow-x: scroll;
+.mobile {
+  max-width: 576px;
 }

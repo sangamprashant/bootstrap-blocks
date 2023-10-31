@@ -57,7 +57,7 @@ const App = () => {
         <div className="container_preview">
           {Object.keys(getPreview({ darkMode: isDarkMode })[category]).map((component, componentIndex) => (
             <div key={componentIndex} className="iframe-container">
-              <button className={`tablet-screen ${isDarkMode?"nav_button_night":""}`} onClick={() => handelElementBound(category, component)}>
+              <button className={`tablet-screen ${isDarkMode?"nav_button_night":""} ${(categorySelected===category&& componentSelected===component)?"active":"" } `} onClick={() => handelElementBound(category, component)}>
                 {getPreview({ darkMode: isDarkMode })[category][component]}
               </button>
             </div>
@@ -66,6 +66,36 @@ const App = () => {
       </div>
     ));
   };
+
+  const TopNavOption = () =>{
+    return (
+      <div className="sub_list">
+        <div className="sub_list_button">
+          {viewCode && (
+            <button className="code_button"onClick={()=>copyToClipboard()} >
+              <Copy /> copy to clipboard
+            </button>
+          )}
+          {viewCode && (
+            <button className="code_button" onClick={handelToggleViewCode}>
+              <Eye /> preview
+            </button>
+          )}
+          {!viewCode && (
+            <button className="code_button" onClick={handelToggleViewCode}>
+              <Code /> View code
+            </button>
+          )}
+        </div>
+        <div className="sub_list_devices">
+          <Laptop active={view === "desktop"} onClick={handelDesktopView} />
+          <Tablet active={view === "tablet"} onClick={handelTabletView} />
+          <Mobile active={view === "mobile"} onClick={handelMobileView} />
+          {isDarkMode ? <Sun active="active" onClick={toggleTheme} /> : <Moon active="active" onClick={toggleTheme} />}
+        </div>
+      </div>
+    )
+  }
 
   const handelElementBound = (category, component) => {
     setCategorySelected(category);
@@ -154,80 +184,60 @@ const App = () => {
       <div className={`${sideNav ? "nav_body_toggled" : "nav_body_default"} ${!isDarkMode ? "nav_body_day" : "nav_body_night"}`}>
         {ListRender()}
       </div>
-
-      <div className={`${sideNav ? "right_body_toggled" : "right_body_default"}`}>
+      <div className={`${sideNav ? "right_body_toggled" : "right_body_default"} ${!isDarkMode?"right_body_day":"right_body_night"}`}>
         <div className={`top_nav ${sideNav ? "top_nav_toggled" : "top_nav_default"}`}>
           <div className="nav_items">
             <div className="sub_list logo">
               {sideNav ? <Toggle onClick={() => handelToggle()} /> : <Left onClick={() => handelToggle()} />}
+              <img height="50" src="./logowobg.png"/>
               <h3>BOOTSTRAPFINDS </h3>
             </div>
-            <div className="sub_list">
-              <div className="sub_list_button">
-                {viewCode && (
-                  <button className="code_button"onClick={()=>copyToClipboard()} >
-                    <Copy /> copy to clipboard
-                  </button>
-                )}
-                {viewCode && (
-                  <button className="code_button" onClick={handelToggleViewCode}>
-                    <Eye /> preview
-                  </button>
-                )}
-                {!viewCode && (
-                  <button className="code_button" onClick={handelToggleViewCode}>
-                    <Code /> View code
-                  </button>
-                )}
-              </div>
-              <div className="sub_list_devices">
-                <Laptop active={view === "desktop"} onClick={handelDesktopView} />
-                <Tablet active={view === "tablet"} onClick={handelTabletView} />
-                <Mobile active={view === "mobile"} onClick={handelMobileView} />
-                {isDarkMode ? <Sun active="active" onClick={toggleTheme} /> : <Moon active="active" onClick={toggleTheme} />}
-              </div>
-            </div>
+            {TopNavOption()}
           </div>
-        </div>
-        <div className="markup" ref={setReference}>{getTemplate({ darkMode: isDarkMode })[categorySelected][componentSelected]}</div>
-        <div className={`main_section ${!isDarkMode ? "main_section_default" : "main_section_toggled"} ${view==="desktop"?"desktop":view==="tablet"?"tablet":view==="mobile"?"mobile":""}`}>
-          {!viewCode&&<Frame
-            contentDidMount={handleContentDidMount}
-            head={
-            <>
-              <link
-                rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-              />
-              <style dangerouslySetInnerHTML={{
-                __html: `
-                  img {
-                    filter: ${isDarkMode
-                      ? 'invert(1) opacity(.5); mix-blend-mode: luminosity;'
-                      : 'sepia(1) hue-rotate(190deg) opacity(.46) grayscale(.7);'
-                    }
-                  }
-                `,
-              }}
-              />
-            </>
-              }       
-            >
-            {getTemplate({ darkMode: isDarkMode })[categorySelected][componentSelected]}
-          </Frame>}
-          {viewCode && (
-            <pre>
-              <code>
-                <SyntaxHighlighter language="jsx" style={isDarkMode ? vs2015 : docco} showLineNumbers>
+          </div>
+          <div className="right_content">
+            <div className="markup" ref={setReference}>{getTemplate({ darkMode: isDarkMode })[categorySelected][componentSelected]}</div>
+            {!viewCode?
+              <div className={`preview_container ${!sideNav?"prview_default":"prview_toggled"}`}>
+                <div className={`main_section ${!sideNav ? "main_section_default" : "main_section_toggled"} ${view==="desktop"?"desktop":view==="tablet"?"tablet":view==="mobile"?"mobile":""}`}>
+                  <Frame
+                    contentDidMount={handleContentDidMount}
+                    head={
+                    <>
+                      <link
+                        rel="stylesheet"
+                        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+                      />
+                      <style dangerouslySetInnerHTML={{
+                        __html: `
+                          img {
+                            filter: ${isDarkMode
+                              ? 'invert(1) opacity(.5); mix-blend-mode: luminosity;'
+                              : 'sepia(1) hue-rotate(190deg) opacity(.46) grayscale(.7);'
+                            }
+                          }
+                        `,
+                      }}
+                      />
+                    </>
+                    }       
+                    >
+                  {getTemplate({ darkMode: isDarkMode })[categorySelected][componentSelected]}
+                  </Frame>
+                </div>
+              </div>
+              :
+              <div>
+                <h2 className={`px-4 ${isDarkMode?"text-white":"text-black"}`}>Code:</h2>
+                <SyntaxHighlighter language="html" style={isDarkMode ? vs2015 : docco} showLineNumbers customStyle={{ background: 'transparent', margin:"0" }}>
                   {beautifyHTML(componentCode)}
                 </SyntaxHighlighter>
-              </code>
-            </pre>
-          )}
+              </div>
+            }
+          </div>
         </div>
-      </div>
       <a className="github" href="https://github.com/sangamprashant/bootstrap-blocks" target="_blank" rel="noreferrer">
-      <GitHub/>GitHub
+        <GitHub/>GitHub
       </a>
       <ToastContainer theme="colored" />
     </div>
