@@ -11,6 +11,7 @@ export default function getPreview({ darkMode = false }) {
       HeroC: darkMode ? <HeroNightB height="100" width="100%" /> : <HeroDayB  height="100" width="100%" />,
       HeroD: darkMode ? <HeroNightB height="100" width="100%" /> : <HeroDayB  height="100" width="100%" />,
       HeroE: darkMode ? <HeroNightB height="100" width="100%" /> : <HeroDayB  height="100" width="100%" />,
+      HeroF: darkMode ? <HeroNightB height="100" width="100%" /> : <HeroDayB  height="100" width="100%" />,
     //   HeroB: darkMode ? <HeroNightB /> : <HeroDayB />,
     }, 
     Footer: {
@@ -22,6 +23,12 @@ export default function getPreview({ darkMode = false }) {
     },
     Form: {
       FormA: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
+    },
+    Cart: {
+      EcommerceA: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
+      EcommerceB: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
+      EcommerceC: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
+      EcommerceD: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
     },
   };
 }

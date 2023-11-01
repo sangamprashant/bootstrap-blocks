@@ -229,7 +229,6 @@ const App = () => {
               </div>
               :
               <div>
-                <h2 className={`px-4 ${isDarkMode?"text-white":"text-black"}`}>Code:</h2>
                 <SyntaxHighlighter language="html" style={isDarkMode ? vs2015 : docco} showLineNumbers customStyle={{ background: 'transparent', margin:"0" }}>
                   {beautifyHTML(componentCode)}
                 </SyntaxHighlighter>
