@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bootstrap-blocks/static/css/main.ea992e4f.css",
+    "main.js": "/bootstrap-blocks/static/js/main.d832592e.js",
+    "static/js/787.241534ed.chunk.js": "/bootstrap-blocks/static/js/787.241534ed.chunk.js",
+    "index.html": "/bootstrap-blocks/index.html",
+    "main.ea992e4f.css.map": "/bootstrap-blocks/static/css/main.ea992e4f.css.map",
+    "main.d832592e.js.map": "/bootstrap-blocks/static/js/main.d832592e.js.map",
+    "787.241534ed.chunk.js.map": "/bootstrap-blocks/static/js/787.241534ed.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea992e4f.css",
+    "static/js/main.d832592e.js"
+  ]
+}
