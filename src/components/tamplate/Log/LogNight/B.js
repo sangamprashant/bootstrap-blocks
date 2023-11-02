@@ -1,6 +1,6 @@
 import React from 'react'
 
-function FormNightB() {
+function LogNightB() {
   return (
 <div class="login_form_wrapper">
 			<div class="container">
@@ -50,4 +50,4 @@ function FormNightB() {
   )
 }
 
-export default FormNightB
+export default LogNightB

@@ -12,7 +12,7 @@ const noUnderlineLink = {
   textDecoration: 'none',
 };
 
-function FormDayB() {
+function LogDayB() {
   return (
     <div className="login_form_wrapper">
       <div className="container">
@@ -69,4 +69,4 @@ function FormDayB() {
   );
 }
 
-export default FormDayB;
+export default LogDayB;

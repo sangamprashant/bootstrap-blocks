@@ -52,7 +52,7 @@ const App = () => {
 
   const ListRender = () => {
     const categories = Object.keys(getPreview({ darkMode: isDarkMode })).sort();
-    categories.reverse();
+    // categories.reverse();
   
     return categories.map((category, index) => (
       <div className="item_container" key={index}>

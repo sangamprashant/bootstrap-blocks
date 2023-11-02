@@ -2,34 +2,178 @@ import React from 'react'
 
 function FormDayA() {
   return (
-    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-    <div class="row align-items-center g-lg-5 py-5">
-      <div class="col-lg-7 text-center text-lg-start">
-        <h1 class="display-4 fw-bold lh-1 mb-3">Vertically centered hero sign-up form</h1>
-        <p class="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
-      </div>
-      <div class="col-md-10 mx-auto col-lg-5">
-        <form class="p-4 p-md-5 border rounded-3 bg-light">
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-            <label for="floatingInput">Email address</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
-            <label for="floatingPassword">Password</label>
-          </div>
-          <div class="checkbox mb-3">
-            <label>
-              <input type="checkbox" value="remember-me"/> Remember me 
-            </label>
-          </div>
-          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
-          <hr class="my-4"/>
-          <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
-        </form>
+    <div class="container card-0 justify-content-center ">
+      {" "}
+      <div class="card-body px-sm-4 px-0">
+        {" "}
+        <div class="row justify-content-center mb-5">
+          {" "}
+          <div class="col-md-10 col">
+            {" "}
+            <h3 class="font-weight-bold ml-md-0 mx-auto text-center text-sm-left">
+              {" "}
+              Form Input Headding{" "}
+            </h3>{" "}
+          </div>{" "}
+        </div>{" "}
+        <div class="row justify-content-center round">
+          {" "}
+          <div class="col-lg-10 col-md-12 ">
+            {" "}
+            <div class="card shadow-lg card-1">
+              {" "}
+              <div class="card-body inner-card">
+                {" "}
+                <div class="row justify-content-center">
+                  {" "}
+                  <div class="col-lg-5 col-md-6 col-sm-12">
+                    {" "}
+                    <div class="form-group">
+                      <label for="first-name">First Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="first-name"
+                        placeholder="Type your Name"
+                      />{" "}
+                    </div>{" "}
+                    <div class="form-group">
+                      {" "}
+                      <label for="Mobile-Number">Mobile Number</label>{" "}
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="Mobile-Number"
+                        placeholder=""
+                      />{" "}
+                    </div>{" "}
+                    <div class="form-group">
+                      {" "}
+                      <label for="inputEmail4">Project Type</label>{" "}
+                      <select class="form-control">
+                        {" "}
+                        <option>Web Design</option> <option>Blockchain</option>{" "}
+                        <option>ML</option>{" "}
+                      </select>{" "}
+                    </div>{" "}
+                    <div class="form-group">
+                      {" "}
+                      <label for="time">
+                        Maximum time for the project
+                      </label>{" "}
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="time"
+                        placeholder=""
+                      />{" "}
+                    </div>{" "}
+                    <div class="form-group">
+                      <label for="skill">Required Skills</label>{" "}
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="skill"
+                        placeholder=""
+                      />{" "}
+                    </div>{" "}
+                  </div>{" "}
+                  <div class="col-lg-5 col-md-6 col-sm-12">
+                    {" "}
+                    <div class="form-group">
+                      {" "}
+                      <label for="last-name">Last Name</label>{" "}
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="last-name"
+                        placeholder=""
+                      />{" "}
+                    </div>{" "}
+                    <div class="form-group">
+                      {" "}
+                      <label for="phone">Email</label>{" "}
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder=""
+                      />{" "}
+                    </div>{" "}
+                    <div class="form-group">
+                      {" "}
+                      <label for="Evaluate Budget">Evaluate Budget</label>{" "}
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="Evaluate Budget"
+                        placeholder=""
+                      />{" "}
+                    </div>{" "}
+                    <div class="form-group">
+                      {" "}
+                      <label for="Company-Name">Company Name</label>{" "}
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="Company-Name"
+                        placeholder=""
+                      />{" "}
+                    </div>{" "}
+                    <div class="form-group">
+                      {" "}
+                      <label for="inputEmail4">Country</label>{" "}
+                      <select class="form-control">
+                        {" "}
+                        <option>India</option> <option>China</option>{" "}
+                        <option>UK</option>{" "}
+                      </select>
+                    </div>{" "}
+                  </div>{" "}
+                </div>{" "}
+                <div class="row justify-content-center">
+                  {" "}
+                  <div class="col-md-12 col-lg-10 col-12">
+                    {" "}
+                    <div class="form-group files">
+                      <label class="my-auto">Upload Your File </label>{" "}
+                      <input id="file" type="file" class="form-control" />
+                    </div>{" "}
+                  </div>{" "}
+                </div>{" "}
+                <div class="row justify-content-center">
+                  {" "}
+                  <div class="col-md-12 col-lg-10 col-12">
+                    {" "}
+                    <div class="form-group">
+                      {" "}
+                      <label for="exampleFormControlTextarea2">
+                        Message
+                      </label>{" "}
+                      <textarea
+                        class="form-control rounded-0"
+                        id="exampleFormControlTextarea2"
+                        rows="5"
+                      ></textarea>
+                    </div>{" "}
+                    <div class="mb-2 mt-4">
+                      {" "}
+                      <div class="text-right">
+                        <button type="button" class="btn btn-primary btn-block">
+                          <small class="font-weight-bold">
+                            Request a Quote
+                          </small>
+                        </button>{" "}
+                      </div>{" "}
+                    </div>{" "}
+                  </div>{" "}
+                </div>{" "}
+              </div>{" "}
+            </div>{" "}
+          </div>{" "}
+        </div>{" "}
       </div>
     </div>
-  </div>
   )
 }
 

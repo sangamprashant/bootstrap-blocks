@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 
 function HeroDayF() {
   return (
-    <div>qasd
-      
-    </div>
-  )
+<div>afde</div>
+  );
 }
 
-export default HeroDayF
+export default HeroDayF;

@@ -16,6 +16,7 @@ import Moon from "./Moon";
 import Mug from "./Mug";
 import People from "./People";
 import Plus from "./Plus";
+import Star from "./Star";
 import Sun from "./Sun";
 import Tablet from "./Tablet";
 import ThumbUp from "./ThumbUp";
@@ -54,4 +55,5 @@ export {
   User,
   Cart,
   Mug,
+  Star,
 };

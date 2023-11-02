@@ -1,6 +1,6 @@
 import React from 'react'
 
-function FormNightA() {
+function TestimonialNightA() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function FormNightA() {
   )
 }
 
-export default FormNightA
+export default TestimonialNightA
