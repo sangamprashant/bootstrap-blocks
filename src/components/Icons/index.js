@@ -1,8 +1,10 @@
+import Cart from "./Cart";
 import Code from "./Code";
 import Copy from "./Copy";
 import Eye from "./Eye";
 import FaceBook from "./FaceBook";
 import GitHub from "./GitHub";
+import Google from "./Google";
 import Instagram from "./Instagram";
 import Laptop from "./Laptop";
 import Left from "./Left";
@@ -11,13 +13,17 @@ import MasterCard from "./MasterCard";
 import Minus from "./Minus";
 import Mobile from "./Mobile";
 import Moon from "./Moon";
+import Mug from "./Mug";
+import People from "./People";
 import Plus from "./Plus";
 import Sun from "./Sun";
 import Tablet from "./Tablet";
+import ThumbUp from "./ThumbUp";
 import Times from "./Times";
 import Toggle from "./Toggle";
 import Trash from "./Trash";
 import Twitter from "./Twitter";
+import User from "./User";
 import VisaBlue from "./VisaBlue";
 
 export {
@@ -42,4 +48,10 @@ export {
   Plus,
   Times,
   Trash,
+  Google,
+  ThumbUp,
+  People,
+  User,
+  Cart,
+  Mug,
 };

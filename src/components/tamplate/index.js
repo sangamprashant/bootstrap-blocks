@@ -1,11 +1,22 @@
+
+import BannerDayA from "./Banner/BannerDay/A";
+import BannerDayB from "./Banner/BannerDay/B";
+import BannerNightA from "./Banner/BannerNight/A";
+import BannerNightB from "./Banner/BannerNight/B";
+
+import ContactDayA from "./Contact/ContactDay/A";
+import ContactNightA from "./Contact/ContactNight/A";
+
 import EcommerceDayA from "./Ecommerce/EcommerceDay/A";
 import EcommerceDayB from "./Ecommerce/EcommerceDay/B";
 import EcommerceDayC from "./Ecommerce/EcommerceDay/C";
 import EcommerceDayD from "./Ecommerce/EcommerceDay/D";
+import EcommerceDayE from "./Ecommerce/EcommerceDay/E";
 import EcommerceNightA from "./Ecommerce/EcommerceNight/A";
 import EcommerceNightB from "./Ecommerce/EcommerceNight/B";
 import EcommerceNightC from "./Ecommerce/EcommerceNight/C";
 import EcommerceNightD from "./Ecommerce/EcommerceNight/D";
+import EcommerceNightE from "./Ecommerce/EcommerceNight/E";
 
 import FooterDayA from "./Footer/FooterDay/A";
 import FooterDayB from "./Footer/FooterDay/B";
@@ -20,7 +31,9 @@ import FooterNightD from "./Footer/FooterNight/D";
 import FooterNightE from "./Footer/FooterNight/E";
 
 import FormDayA from "./Form/FormDay/A";
+import FormDayB from "./Form/FormDay/B";
 import FormNightA from "./Form/FormNight/A";
+import FormNightB from "./Form/FormNight/B";
 
 import HeroDayA from "./Hero/HeroDay/A";
 import HeroDayB from "./Hero/HeroDay/B";
@@ -54,12 +67,21 @@ export default function getTemplate({ darkMode = false }) {
     },
     Form: {
       FormA: darkMode ? <FormNightA /> : <FormDayA />,
+      FormB: darkMode ? <FormNightB /> : <FormDayB />,
     },
     Cart: {
       EcommerceA: darkMode ? <EcommerceNightA />: <EcommerceDayA />,
       EcommerceB: darkMode ? <EcommerceNightB />: <EcommerceDayB />,
       EcommerceC: darkMode ? <EcommerceNightC />: <EcommerceDayC />,
       EcommerceD: darkMode ? <EcommerceNightD />: <EcommerceDayD />,
+      EcommerceE: darkMode ? <EcommerceNightE />: <EcommerceDayE />,
+    },
+    Contact: {
+      ContactA: darkMode ? <ContactNightA /> : <ContactDayA/>,
+    },
+    Banner: {
+      BannerA: darkMode ? <BannerNightA /> : <BannerDayA/>,
+      BannerB: darkMode ? <BannerNightB /> : <BannerDayB/>,
     },
   };
 }
