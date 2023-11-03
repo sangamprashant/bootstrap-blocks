@@ -1,3 +1,17 @@
+import BannerDayA from "./Banner/BannerDay/A";
+import BannerDayB from "./Banner/BannerDay/B";
+import BannerNightA from "./Banner/BannerNight/A";
+import BannerNightB from "./Banner/BannerNight/B";
+import EcommerceDayA from "./Ecommerce/EcommerceDay/A";
+import EcommerceDayB from "./Ecommerce/EcommerceDay/B";
+import EcommerceDayC from "./Ecommerce/EcommerceDay/C";
+import EcommerceDayD from "./Ecommerce/EcommerceDay/D";
+import EcommerceDayE from "./Ecommerce/EcommerceDay/E";
+import EcommerceNightA from "./Ecommerce/EcommerceNight/A";
+import EcommerceNightB from "./Ecommerce/EcommerceNight/B";
+import EcommerceNightC from "./Ecommerce/EcommerceNight/C";
+import EcommerceNightD from "./Ecommerce/EcommerceNight/D";
+import EcommerceNightE from "./Ecommerce/EcommerceNight/E";
 import HeroDayA from "./Hero/HeroDay/HeroDayA";
 import HeroDayB from "./Hero/HeroDay/HeroDayB";
 import HeroNightA from "./Hero/HeroNight/HeroNightA";
@@ -12,7 +26,6 @@ export default function getPreview({ darkMode = false }) {
       HeroD: darkMode ? <HeroNightB height="100" width="100%" /> : <HeroDayB  height="100" width="100%" />,
       HeroE: darkMode ? <HeroNightB height="100" width="100%" /> : <HeroDayB  height="100" width="100%" />,
       HeroF: darkMode ? <HeroNightB height="100" width="100%" /> : <HeroDayB  height="100" width="100%" />,
-    //   HeroB: darkMode ? <HeroNightB /> : <HeroDayB />,
     }, 
     Footer: {
       FooterA: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
@@ -30,18 +43,19 @@ export default function getPreview({ darkMode = false }) {
       LogE: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
     },
     Cart: {
-      EcommerceA: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
-      EcommerceB: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
-      EcommerceC: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
-      EcommerceD: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
-      EcommerceE: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
+      // over
+      EcommerceA: darkMode ? <EcommerceNightA height="100" width="100%" /> : <EcommerceDayA  height="100" width="100%" />,
+      EcommerceB: darkMode ? <EcommerceNightB height="100" width="100%" /> : <EcommerceDayB  height="100" width="100%" />,
+      EcommerceC: darkMode ? <EcommerceNightC height="100" width="100%" /> : <EcommerceDayC  height="100" width="100%" />,
+      EcommerceD: darkMode ? <EcommerceNightD height="100" width="100%" /> : <EcommerceDayD  height="100" width="100%" />,
+      EcommerceE: darkMode ? <EcommerceNightE height="100" width="100%" /> : <EcommerceDayE  height="100" width="100%" />,
     },
     Contact: {
       ContactA: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
     },
     Banner: {
-      BannerA: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
-      BannerB: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
+      BannerA: darkMode ? <BannerNightA height="100" width="100%" /> : <BannerDayA  height="100" width="100%" />,
+      BannerB: darkMode ? <BannerNightB height="100" width="100%" /> : <BannerDayB  height="100" width="100%" />,
     },
     Pricing: {
       PricingA: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,

@@ -19,17 +19,10 @@ function EcommerceNightD() {
       quantity: 1,
       imageSrc: `${window.location.origin}/logo.png`
     },
-    {
-      name: "iPad 9.7 6-gen WiFi 32GB",
-      color: "rose pink",
-      price: 659,
-      quantity: 2,
-      imageSrc: `${window.location.origin}/sss.png`
-    },
   ];
 
   return (
-    <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
+    <section className="h-100 h-custom" style={{ backgroundColor: "gray" }}>
       <div className="container h-100 py-5">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col">
@@ -37,7 +30,7 @@ function EcommerceNightD() {
               className="card shopping-cart"
               style={{ borderRadius: "15px" }}
             >
-              <div className="card-body text-black">
+              <div className="card-body text-white" style={{backgroundColor:"#696969"}}>
                 <div className="row">
                   <div className="col-lg-12 px-5 py-4">
                     <h3 className="mb-5 pt-2 text-center fw-bold text-uppercase">
@@ -61,7 +54,7 @@ function EcommerceNightD() {
                             <i className="fas fa-times"></i>
                           </a>
                           <h5 className="text-primary">{product.name}</h5>
-                          <h6 style={{ color: "#9e9e9e" }}>
+                          <h6 style={{ color: "white" }}>
                             Color: {product.color}
                           </h6>
                           <div className="d-flex align-items-center">
@@ -84,6 +77,7 @@ function EcommerceNightD() {
                                 value={product.quantity}
                                 type="number"
                                 className="form-control form-control-sm"
+                                style={{backgroundColor:"gray"}}
                               />
                               <button
                                 className="btn btn-link px-2"
@@ -112,7 +106,7 @@ function EcommerceNightD() {
                     </div>
                     <div
                       className="d-flex justify-content-between p-2 mb-2"
-                      style={{ backgroundColor: "#e1f5fe" }}
+                      style={{ backgroundColor: "gray" }}
                     >
                       <h5 className="fw-bold mb-0">Total:</h5>
                       <h5 className="fw-bold mb-0">

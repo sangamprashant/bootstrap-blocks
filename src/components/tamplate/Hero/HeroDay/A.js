@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { StyleContext } from "../../../../StyleContext";
 
 function HeroDayA() {
+  const { primaryTheme,secondaryTheme } =useContext(StyleContext);
   return (
     <div class="px-4 py-5 my-5 text-center">
       <img
@@ -19,10 +21,10 @@ function HeroDayA() {
           prebuilt components, and powerful JavaScript plugins.
         </p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <button type="button" class="btn btn-primary btn-lg px-4 gap-3">
+          <button type="button" class={`btn btn-${primaryTheme} btn-lg px-4 gap-3`}>
             Primary button
           </button>
-          <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+          <button type="button" class={`btn btn-outline-${secondaryTheme} btn-lg px-4`}>
             Secondary
           </button>
         </div>

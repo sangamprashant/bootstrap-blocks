@@ -8,6 +8,7 @@ import Google from "./Google";
 import Instagram from "./Instagram";
 import Laptop from "./Laptop";
 import Left from "./Left";
+import LeftCircle from "./LeftCircle";
 import LinkedIn from "./LinkedIn";
 import MasterCard from "./MasterCard";
 import Minus from "./Minus";
@@ -16,6 +17,7 @@ import Moon from "./Moon";
 import Mug from "./Mug";
 import People from "./People";
 import Plus from "./Plus";
+import RightCircle from "./RightCircle";
 import Star from "./Star";
 import Sun from "./Sun";
 import Tablet from "./Tablet";
@@ -56,4 +58,6 @@ export {
   Cart,
   Mug,
   Star,
+  RightCircle,
+  LeftCircle,
 };

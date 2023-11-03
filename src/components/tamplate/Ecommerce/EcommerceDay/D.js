@@ -19,13 +19,6 @@ function EcommerceDayD() {
       quantity: 1,
       imageSrc: `${window.location.origin}/logo.png`
     },
-    {
-      name: "iPad 9.7 6-gen WiFi 32GB",
-      color: "rose pink",
-      price: 659,
-      quantity: 2,
-      imageSrc: `${window.location.origin}/sss.png`
-    },
   ];
 
   return (

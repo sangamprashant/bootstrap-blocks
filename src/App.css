@@ -207,8 +207,6 @@ code {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  background-color: #fff;
-  color: #4a5568;
   display: inline-flex;
   font-weight: 600;
   align-items: center;
@@ -239,4 +237,17 @@ code {
 }
 .mobile {
   max-width: 576px;
+}
+
+
+.collorbtn{
+  border: 1px solid white;
+  border-radius: 50px;
+  background-color: rgb(196, 196, 196);
+}
+.collorbtn a {
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
