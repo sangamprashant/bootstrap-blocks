@@ -23,11 +23,13 @@ import FooterDayB from "./Footer/FooterDay/B";
 import FooterDayC from "./Footer/FooterDay/C";
 import FooterDayD from "./Footer/FooterDay/D";
 import FooterDayE from "./Footer/FooterDay/E";
+import FooterDayF from "./Footer/FooterDay/F";
 import FooterNightA from "./Footer/FooterNight/A";
 import FooterNightB from "./Footer/FooterNight/B";
 import FooterNightC from "./Footer/FooterNight/C";
 import FooterNightD from "./Footer/FooterNight/D";
 import FooterNightE from "./Footer/FooterNight/E";
+import FooterNightF from "./Footer/FooterNight/F";
 
 import FormDayA from "./Form/FormDay/A";
 import FormNightA from "./Form/FormNight/A";
@@ -57,12 +59,16 @@ import LogNightD from "./Log/LogNight/D";
 import LogNightE from "./Log/LogNight/E";
 
 import OtpDayA from "./Otp/OtpDay/A";
+import OtpDayB from "./Otp/OtpDay/B";
 import OtpNightA from "./Otp/OtpNight/A";
+import OtpNightB from "./Otp/OtpNight/B";
 
 import PricingDayA from "./Pricing/PricingDay/A";
 import PricingDayB from "./Pricing/PricingDay/B";
+import PricingDayC from "./Pricing/PricingDay/C";
 import PricingNightA from "./Pricing/PricingNight/A";
 import PricingNightB from "./Pricing/PricingNight/B";
+import PricingNightC from "./Pricing/PricingNight/C";
 
 import ProductDayA from "./Product/ProductDay/A";
 import ProductDayB from "./Product/ProductDay/B";
@@ -70,17 +76,23 @@ import ProductDayC from "./Product/ProductDay/C";
 import ProductDayD from "./Product/ProductDay/D";
 import ProductDayE from "./Product/ProductDay/E";
 import ProductDayF from "./Product/ProductDay/F";
+import ProductDayG from "./Product/ProductDay/G";
+import ProductDayH from "./Product/ProductDay/H";
 import ProductNightA from "./Product/ProductNight/A";
 import ProductNightB from "./Product/ProductNight/B";
 import ProductNightC from "./Product/ProductNight/C";
 import ProductNightD from "./Product/ProductNight/D";
 import ProductNightE from "./Product/ProductNight/E";
 import ProductNightF from "./Product/ProductNight/F";
+import ProductNightG from "./Product/ProductNight/G";
+import ProductNightH from "./Product/ProductNight/H";
 
 import TestimonialDayA from "./Testimonial/TestimonialDay/A";
 import TestimonialDayB from "./Testimonial/TestimonialDay/B";
+import TestimonialDayC from "./Testimonial/TestimonialDay/C";
 import TestimonialNightA from "./Testimonial/TestimonialNight/A";
 import TestimoniaLNightB from "./Testimonial/TestimonialNight/B";
+import TestimonialNightC from "./Testimonial/TestimonialNight/C";
 
 export default function getTemplate({ darkMode = false }) {
   return {
@@ -98,6 +110,7 @@ export default function getTemplate({ darkMode = false }) {
       FooterC: darkMode ? <FooterNightC /> : <FooterDayC />,
       FooterD: darkMode ? <FooterNightD /> : <FooterDayD />,
       FooterE: darkMode ? <FooterNightE /> : <FooterDayE />,
+      FooterF: darkMode ? <FooterNightF /> : <FooterDayF />,
     },
     Log: {
       LogA: darkMode ? <LogNightA /> : <LogDayA />,
@@ -123,10 +136,12 @@ export default function getTemplate({ darkMode = false }) {
     Pricing: {
       PricingA: darkMode ? <PricingNightA /> : <PricingDayA/>,
       PricingB: darkMode ? <PricingNightB /> : <PricingDayB/>,
+      PricingC: darkMode ? <PricingNightC /> : <PricingDayC/>,
     }, 
     Testimonial: {
       TestimonialA: darkMode ? <TestimonialNightA /> : <TestimonialDayA/>,
       TestimonialB: darkMode ? <TestimoniaLNightB /> : <TestimonialDayB/>,
+      TestimonialC: darkMode ? <TestimonialNightC /> : <TestimonialDayC/>,
     },
     Product: {
       ProductA: darkMode ? <ProductNightA /> : <ProductDayA/>,
@@ -135,9 +150,12 @@ export default function getTemplate({ darkMode = false }) {
       ProductD: darkMode ? <ProductNightD /> : <ProductDayD/>,
       ProductE: darkMode ? <ProductNightE /> : <ProductDayE/>,
       ProductF: darkMode ? <ProductNightF /> : <ProductDayF/>,
+      ProductG: darkMode ? <ProductNightG /> : <ProductDayG/>,
+      ProductH: darkMode ? <ProductNightH /> : <ProductDayH/>,
     },
     Otp: {
       OtpA: darkMode ? <OtpNightA /> : <OtpDayA/>,
+      OtpB: darkMode ? <OtpNightB /> : <OtpDayB/>,
     },
     Form: {
       FormA: darkMode ? <FormNightA /> : <FormDayA/>,

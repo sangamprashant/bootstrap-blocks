@@ -6,7 +6,7 @@ function HeroDayE() {
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
-            <img src={"logo.png"} alt="Hero Image" className="img-fluid" />
+            <img src={`${window.location.origin}/logo.png`} alt="Hero Image" className="img-fluid" />
           </div>
           <div className="col-lg-6">
             <div className="hero-content">
