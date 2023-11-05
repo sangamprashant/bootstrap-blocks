@@ -3,13 +3,12 @@ import React from "react";
 function HeroDayB() {
   return (
     <div class="px-4 pt-5 my-5 text-center border-bottom">
-      <h1 class="display-4 fw-bold">Centered screenshot</h1>
+      <h1 class="display-4 fw-bold">Welcome to BOOTSTRAPFINDS</h1>
       <div class="col-lg-6 mx-auto">
         <p class="lead mb-4">
-          Quickly design and customize responsive mobile-first sites with
-          Bootstrap, the world’s most popular front-end open source toolkit,
-          featuring Sass variables and mixins, responsive grid system, extensive
-          prebuilt components, and powerful JavaScript plugins.
+          Discover a wide range of pre-made Bootstrap components and code
+          snippets at BOOTSTRAPFINDS. Streamline your web development with our
+          collection of ready-to-use, responsive design elements.
         </p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
           <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">

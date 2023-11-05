@@ -2,11 +2,11 @@ import React from "react";
 
 function HeroNightE() {
   return (
-    <section className="hero bg-dark text-white">
+    <section className="hero text-white">
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
-            <img src={"navblue.png"} alt="Hero Image" className="img-fluid" />
+            <img src={"navblue.png"} height="400" width="400" alt="Hero Image" className="img-fluid" />
           </div>
           <div className="col-lg-6">
             <div className="hero-content">

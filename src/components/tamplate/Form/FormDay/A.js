@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function FormDayA() {
   return (
@@ -6,16 +6,6 @@ function FormDayA() {
       {" "}
       <div class="card-body px-sm-4 px-0">
         {" "}
-        <div class="row justify-content-center mb-5">
-          {" "}
-          <div class="col-md-10 col">
-            {" "}
-            <h3 class="font-weight-bold ml-md-0 mx-auto text-center text-sm-left">
-              {" "}
-              Form Input Headding{" "}
-            </h3>{" "}
-          </div>{" "}
-        </div>{" "}
         <div class="row justify-content-center round">
           {" "}
           <div class="col-lg-10 col-md-12 ">
@@ -174,7 +164,7 @@ function FormDayA() {
         </div>{" "}
       </div>
     </div>
-  )
+  );
 }
 
-export default FormDayA
+export default FormDayA;

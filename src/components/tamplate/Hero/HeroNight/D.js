@@ -19,7 +19,7 @@ function HeroNightD() {
             </div>
           </div>
           <div className="col-lg-6">
-            <img src={"navblue.png"} alt="Hero Image" className="img-fluid" />
+            <img src={"navblue.png"} height="400" width="400" alt="Hero Image" className="img-fluid" />
           </div>
         </div>
       </div>

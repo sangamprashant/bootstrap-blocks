@@ -19,7 +19,7 @@ function HeroDayD() {
             </div>
           </div>
           <div className="col-lg-6">
-            <img src={"logo.png"} alt="Hero Image" className="img-fluid" />
+            <img src={"logo.png"} height="400" width="400" alt="Hero Image" className="img-fluid" />
           </div>
         </div>
       </div>
