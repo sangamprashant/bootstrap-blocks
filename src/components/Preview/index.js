@@ -2,6 +2,10 @@ import BannerDayA from "./Banner/BannerDay/A";
 import BannerDayB from "./Banner/BannerDay/B";
 import BannerNightA from "./Banner/BannerNight/A";
 import BannerNightB from "./Banner/BannerNight/B";
+
+import ContactDayA from "./Contact/ContactDay/A";
+import ContactNightA from "./Contact/ContactNight/A";
+
 import EcommerceDayA from "./Ecommerce/EcommerceDay/A";
 import EcommerceDayB from "./Ecommerce/EcommerceDay/B";
 import EcommerceDayC from "./Ecommerce/EcommerceDay/C";
@@ -12,6 +16,12 @@ import EcommerceNightB from "./Ecommerce/EcommerceNight/B";
 import EcommerceNightC from "./Ecommerce/EcommerceNight/C";
 import EcommerceNightD from "./Ecommerce/EcommerceNight/D";
 import EcommerceNightE from "./Ecommerce/EcommerceNight/E";
+
+import FooterDayA from "./Footer/FooterDay/A";
+import FooterDayB from "./Footer/FooterDay/B";
+import FooterNightA from "./Footer/FooterNight/A";
+import FooterNightB from "./Footer/FooterNight/B";
+
 import HeroDayA from "./Hero/HeroDay/HeroDayA";
 import HeroDayB from "./Hero/HeroDay/HeroDayB";
 import HeroNightA from "./Hero/HeroNight/HeroNightA";
@@ -28,8 +38,8 @@ export default function getPreview({ darkMode = false }) {
       HeroF: darkMode ? <HeroNightB height="100" width="100%" /> : <HeroDayB  height="100" width="100%" />,
     }, 
     Footer: {
-      FooterA: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
-      FooterB: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
+      FooterA: darkMode ? <FooterNightA height="100" width="100%" /> : <FooterDayA  height="100" width="100%" />,
+      FooterB: darkMode ? <FooterNightB height="100" width="100%" /> : <FooterDayB  height="100" width="100%" />,
       FooterC: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
       FooterD: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
       FooterE: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
@@ -51,7 +61,8 @@ export default function getPreview({ darkMode = false }) {
       EcommerceE: darkMode ? <EcommerceNightE height="100" width="100%" /> : <EcommerceDayE  height="100" width="100%" />,
     },
     Contact: {
-      ContactA: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
+      // over
+      ContactA: darkMode ? <ContactNightA height="100" width="100%" /> : <ContactDayA  height="100" width="100%" />,
     },
     Banner: {
       BannerA: darkMode ? <BannerNightA height="100" width="100%" /> : <BannerDayA  height="100" width="100%" />,

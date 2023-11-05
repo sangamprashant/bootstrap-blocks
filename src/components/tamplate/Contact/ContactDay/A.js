@@ -25,7 +25,9 @@ function ContactDayA() {
                                 <label class="sr-only">Message</label>
                                 <textarea class="form-control" required="" rows="7" placeholder="Write Message"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
+                            <div className='d-flex'>
+                                <button type="submit" class="my-3 w-100 btn btn-primary">Send Message</button>
+                            </div>
                         </form>
                     </div>
                    

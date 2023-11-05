@@ -7,7 +7,7 @@ function FooterDayC() {
         <div className="row">
           <div className="col-md-4">
             <img
-              src={`${window.location.origin}/navblue.png`}
+              src={`${window.location.origin}/logo.png`}
               alt="Your Logo"
               height="100"
               width="100"
