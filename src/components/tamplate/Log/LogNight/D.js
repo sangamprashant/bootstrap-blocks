@@ -6,7 +6,7 @@ function LogNightD() {
     <div class="container">
       <div class="row g-0 mt-5 mb-5 height-100 justify-content-center">
         <div class="col-md-6">
-          <div class="bg-white p-4 h-100">
+          <div class="border text-white p-4 h-100">
             <div class="p-3 d-flex justify-content-center flex-column align-items-center">
               {" "}
               <h3 class="main-heading">Signin To Cever</h3>

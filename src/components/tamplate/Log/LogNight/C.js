@@ -3,7 +3,7 @@ import React from 'react'
 function LogNightC() {
   return (
     <div class="container d-flex justify-content-center">
-    <div class="card col-md-5 p-3">
+    <div class="border text-white col-md-5 p-3">
       <div class="d-flex justify-content-center my-1">
         <h4 className="p-2">Signin</h4>
       </div>

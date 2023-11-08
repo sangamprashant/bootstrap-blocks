@@ -6,12 +6,12 @@ function OtpNightA() {
     {" "}
     <div class="position-relative col-md-6">
       {" "}
-      <div class="card p-4 text-center">
+      <div class="border p-4 text-center">
         {" "}
         <h6 className='text-danger'>
           Please enter the one time password <br /> to verify your account
         </h6>{" "}
-        <div>
+        <div className="text-white">
           {" "}
           <span>A code has been sent to</span> <small>*******9897</small>{" "}
         </div>{" "}

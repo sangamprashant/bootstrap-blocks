@@ -13,7 +13,7 @@ function LogDayE() {
             {" "}
             <div class="content">
               {" "}
-               <span>CREDITER</span>{" "}
+               <span>BOOTSTRAPFINDS</span>{" "}
             </div>{" "}
             <div class="content1">
               {" "}

@@ -9,13 +9,13 @@ function LogNightE() {
         {" "}
         <div class="col-md-8">
           {" "}
-          <div class="card px-5 py-4">
+          <div class="border text-white px-5 py-4">
             {" "}
             <div class="content">
               {" "}
-             <span>CREDITER</span>{" "}
+             <span>BOOTSTRAPFINDS</span>{" "}
             </div>{" "}
-            <div class="content1">
+            <div class="content">
               {" "}
               <h3>
                 Sign Up Today To <br />
