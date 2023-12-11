@@ -1,97 +1,65 @@
 import React from "react";
 
+const testimonials = [
+  {
+    id: 1,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua.",
+    imageUrl: `${window.location.origin}/user2.jpg`,
+    name: "Prashant Srivastav",
+    companyName: "Company 1",
+  },
+  {
+    id: 2,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imageUrl: `${window.location.origin}/user1.jpg`,
+    name: "Prashant Srivastav",
+    companyName: "Company 2",
+  },
+  {
+    id: 2,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imageUrl: `${window.location.origin}/user1.jpg`,
+    name: "Prashant Srivastav",
+    companyName: "Company 2",
+  },
+  {
+    id: 2,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imageUrl: `${window.location.origin}/user1.jpg`,
+    name: "Prashant Srivastav",
+    companyName: "Company 2",
+  },
+  // Add more testimonial objects as needed
+];
+
 function TestimonialDayC() {
   return (
-    <div class="container mt-5">
-      <div class="d-flex justify-content-center py-3">
-        <div class="mr-2">
-          <div class="card">
-            <div class="px-2 py-2">
-              <span class="maintxt">
-                "Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore magna aliqua."
-              </span>
-              <div class="d-flex pt-3">
-                <div>
-                  <img
-                    src="https://i.imgur.com/hczKIze.jpg"
-                    width="50"
-                    class="rounded-circle"
-                  />
-                </div>
-                <div class="ml-2">
-                  <span class="name">Dan Spratling</span>
-                  <p class="para">Company name</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card mt-3">
-            <div class="px-2 py-2">
-              <span class="maintxt">
-                "Lorem ipsum dolor sit amet,consectetur adipiscing elit."
-              </span>
-              <div class="d-flex pt-3">
-                <div>
-                  <img
-                    src="https://i.imgur.com/hczKIze.jpg"
-                    width="50"
-                    class="rounded-circle"
-                  />
-                </div>
-                <div class="ml-2">
-                  <span class="name">Dan Spratling</span>
-                  <p class="para">Company name</p>
+    <div className="container mt-5">
+      <div className="d-flex justify-content-center py-3 row">
+        {testimonials.map((testimonial) => (
+          <div key={testimonial.id} className="mr-2 col-md-6">
+            <div className="card">
+              <div className="px-2 py-2">
+                <span className="maintxt">{testimonial.text}</span>
+                <div className="d-flex pt-3">
+                  <div>
+                    <img
+                      src={testimonial.imageUrl}
+                      alt={testimonial.name}
+                      className="rounded-circle"
+                      width="50"
+                      height="50"
+                    />
+                  </div>
+                  <div className="ml-2">
+                    <span className="name">{testimonial.name}</span>
+                    <p className="para">{testimonial.companyName}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="ml-2">
-          <div class="card">
-            <div class="px-2 py-2">
-              <span class="maintxt">
-                "Lorem ipsum dolor sit amet,consectetur adipiscing elit."
-              </span>
-              <div class="d-flex pt-3">
-                <div>
-                  <img
-                    src="https://i.imgur.com/hczKIze.jpg"
-                    width="50"
-                    class="rounded-circle"
-                  />
-                </div>
-                <div class="ml-2">
-                  <span class="name">Dan Spratling</span>
-                  <p class="para">Company name</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card mt-3">
-            <div class="px-2 py-2">
-              <span class="maintxt">
-                "Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore magna aliqua."
-              </span>
-              <div class="d-flex pt-3">
-                <div>
-                  <img
-                    src="https://i.imgur.com/hczKIze.jpg"
-                    width="50"
-                    class="rounded-circle"
-                  />
-                </div>
-                <div class="ml-2">
-                  <span class="name">Dan Spratling</span>
-                  <p class="para">Company name</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

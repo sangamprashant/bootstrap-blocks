@@ -4,48 +4,42 @@ import { Google, Star } from "../../../Icons";
 function ProductDayC() {
   const products = [
     {
-      image:
-        "https://www.freepnglogos.com/uploads/plant-png/plant-png-pleasures-helping-others-beautiful-transparent-plants-0.png",
+      image: `${window.location.origin}/plant1.png`,
       title: "The Little Botanical Haworthia",
       rating: 5,
       reviews: 3,
       price: 10.99,
     },
     {
-      image:
-        "https://www.freepnglogos.com/uploads/plant-png/plants-transparent-png-pictures-icons-and-png-14.png",
+      image: `${window.location.origin}/plant2.png`,
       title: "The Little Botanical Haworthia",
       rating: 5,
       reviews: 3,
       price: 10.99,
     },
     {
-      image:
-        "https://www.freepnglogos.com/uploads/plant-png/plant-png-plants-png-transparent-images-png-only-27.png",
+      image: `${window.location.origin}/plant3.png`,
       title: "The Little Botanical Haworthia",
       rating: 5,
       reviews: 3,
       price: 10.99,
     },
     {
-      image:
-        "https://www.freepnglogos.com/uploads/plant-png/plant-png-pleasures-helping-others-beautiful-transparent-plants-0.png",
+      image: `${window.location.origin}/plant1.png`,
       title: "The Little Botanical Haworthia",
       rating: 5,
       reviews: 3,
       price: 10.99,
     },
     {
-      image:
-        "https://www.freepnglogos.com/uploads/plant-png/plants-transparent-png-pictures-icons-and-png-14.png",
+      image: `${window.location.origin}/plant3.png`,
       title: "The Little Botanical Haworthia",
       rating: 5,
       reviews: 3,
       price: 10.99,
     },
     {
-      image:
-        "https://www.freepnglogos.com/uploads/plant-png/plant-png-plants-png-transparent-images-png-only-27.png",
+      image: `${window.location.origin}/plant2.png`,
       title: "The Little Botanical Haworthia",
       rating: 5,
       reviews: 3,
@@ -100,8 +94,13 @@ function ProductDayC() {
                 </div>
                 <div className="px-lg-2 px-1 d-flex">
                   {[...Array(product.rating)].map((_, i) => (
-                    <div className="" key={i}  >
-                    <Star height="20" width="20" stroke="yellow" fill="#fdf700"/>
+                    <div className="" key={i}>
+                      <Star
+                        height="20"
+                        width="20"
+                        stroke="yellow"
+                        fill="#fdf700"
+                      />
                     </div>
                   ))}
                   <a href="#" className="px-lg-2 px-1 reviews">

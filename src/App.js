@@ -63,7 +63,7 @@ const App = () => {
         <div className="container_preview">
           {Object.keys(getPreview({ darkMode: isDarkMode })[category]).map((component, componentIndex) => (
             <div key={componentIndex} className="iframe-container">
-              <button className={`tablet-screen ${isDarkMode ? "nav_button_night" : ""} ${(categorySelected === category && componentSelected === component) ? "active" : ""}`} onClick={() => handelElementBound(category, component)}>
+              <button className={`tablet-screen ${isDarkMode ? "nav_button_night" : "nav_button_day"} ${(categorySelected === category && componentSelected === component) ? "active" : ""}`} onClick={() => handelElementBound(category, component)}>
                 {getPreview({ darkMode: isDarkMode })[category][component]}
               </button>
             </div>
@@ -82,7 +82,7 @@ const App = () => {
             {Object.keys(getPreview({ darkMode: isDarkMode })[categorySearched]).map((component, componentIndex) => (
               <div key={componentIndex} className="iframe-container">
                 <button
-                  className={`tablet-screen ${isDarkMode ? "nav_button_night" : ""} ${
+                  className={`tablet-screen ${isDarkMode ? "nav_button_night" : "nav_button_day"} ${
                     categorySelected === categorySearched && componentSelected === component
                       ? "active"
                       : ""

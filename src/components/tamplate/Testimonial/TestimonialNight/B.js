@@ -1,40 +1,56 @@
-import React from 'react'
+import React from "react";
 
-function TestimoniaLNightB() {
+const testimonials = [
+  {
+    id: 1,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+    imageSrc: `${window.location.origin}/user1.jpg`,
+    name: "Prashant Srivastav",
+    position: "Student, BCA",
+  },
+  {
+    id: 1,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+    imageSrc: `${window.location.origin}/user1.jpg`,
+    name: "Prashant Srivastav",
+    position: "Student, BCA",
+  },
+  {
+    id: 1,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+    imageSrc: `${window.location.origin}/user1.jpg`,
+    name: "Prashant Srivastav",
+    position: "Student, BCA",
+  },
+];
+
+function TestimonialNightB() {
   return (
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card mt-5 p-3">
-                <div class="comment mb-3"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam" </div>
-                <div class="info text-center mt-4 bg-blue"> <img src="https://i.imgur.com/xELPaag.jpg" width="70" class="rounded-circle mb-1"/>
-                    <h4 class="mt-1">Nicholas simun</h4>
-                    <h5 class="mb-4">CEO, Timko Tui</h5>
-                </div>
+    <div className="container">
+      <div className="row">
+        {testimonials.map((testimonial) => (
+          <div className="col-md-4" key={testimonial.id}>
+            <div className="bg-dark text-white mt-5 p-3">
+              <div className="comment mb-3">{testimonial.comment}</div>
+              <div className="info text-center mt-4">
+                <img
+                  src={testimonial.imageSrc}
+                  width="70"
+                  className="rounded-circle mb-1"
+                  alt={testimonial.name}
+                />
+                <h4 className="mt-1">{testimonial.name}</h4>
+                <h5 className="mb-4">{testimonial.position}</h5>
+              </div>
             </div>
-            <div> </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card mb-5 p-3">
-                <div class="comment mb-3"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam" </div>
-                <div class="info text-center mt-4 bg-red"> <img src="https://i.imgur.com/o5uMfKo.jpg" width="70" class="rounded-circle mb-1"/>
-                    <h4 class="mt-1">Sophia T.</h4>
-                    <h5 class="mb-4">CEO, T. Inc</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card mt-5 p-3">
-                <div class="comment mb-3"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam" </div>
-                <div class="info text-center mt-4 bg-orange"> <img src="https://i.imgur.com/At1IG6H.png" width="70" class="rounded-circle mb-1"/>
-                    <h4 class="mt-1">Mike Vincent</h4>
-                    <h5 class="mb-4">CEO, Vincent Inc.</h5>
-                </div>
-            </div>
-        </div>
+          </div>
+        ))}
+      </div>
     </div>
-</div>
-  )
+  );
 }
 
-export default TestimoniaLNightB
+export default TestimonialNightB;

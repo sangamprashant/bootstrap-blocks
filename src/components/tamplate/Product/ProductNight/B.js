@@ -1,28 +1,28 @@
-import React from 'react'
+import React from "react";
 
 function ProductNightB() {
   return (
-<div className="container my-5 text-white">
+    <div className="container my-5 text-white">
       <div className="row">
-       
         <div className="col-md-7">
           <div className="main-description px-2">
             <strong className="text-bold-600 text-primary">
               Category: Women
             </strong>
             <h2 className="product-title font-weight-bold my-3">
-            <strong>
-
-              Black dress for Women
-            </strong>
+              <strong>Black dress for Women</strong>
             </h2>
 
             <div className="price-area my-4">
               <p className="old-price mb-1">
                 <del>$100</del>
-                <span className="old-price-discount text-danger">(20% off)</span>
+                <span className="old-price-discount text-danger">
+                  (20% off)
+                </span>
               </p>
-              <h2 className="new-price font-weight-bold mb-1"><strong>$80</strong></h2>
+              <h2 className="new-price font-weight-bold mb-1">
+                <strong>$80</strong>
+              </h2>
               <p className="text-secondary mb-1">
                 (Additional tax may apply on checkout)
               </p>
@@ -54,7 +54,9 @@ function ProductNightB() {
           </div>
 
           <div className="product-details my-4">
-            <p className="text-color mb-1 text-uppercase"><strong>Product Details</strong></p>
+            <p className="text-color mb-1 text-uppercase">
+              <strong>Product Details</strong>
+            </p>
             <p className="description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
               excepturi odio recusandae aliquid ad impedit autem commodi earum
@@ -62,14 +64,18 @@ function ProductNightB() {
             </p>
           </div>
           <div className="product-details my-4">
-            <p className="details-title text-color mb-2 text-uppercase"><strong>Material & Care</strong></p>
+            <p className="details-title text-color mb-2 text-uppercase">
+              <strong>Material & Care</strong>
+            </p>
             <ul>
               <li>Cotton</li>
               <li>Machine-wash</li>
             </ul>
           </div>
           <div className="product-details my-4">
-            <p className="details-title text-color mb-2 text-uppercase"><strong>Sold by</strong></p>
+            <p className="details-title text-color mb-2 text-uppercase">
+              <strong>Sold by</strong>
+            </p>
             <ul>
               <li>Cotton</li>
               <li>Machine-wash</li>
@@ -80,35 +86,28 @@ function ProductNightB() {
           <div className="main-img">
             <img
               className="img-fluid"
-              src="https://cdn.pixabay.com/photo/2015/07/24/18/40/model-858753_960_720.jpg"
+              src={`${window.location.origin}/dress1.jpeg`}
               alt="ProductS"
             />
             <div className="row my-3 previews">
               <div className="col-md-3">
                 <img
                   className="w-100"
-                  src="https://cdn.pixabay.com/photo/2015/07/24/18/40/model-858754_960_720.jpg"
+                  src={`${window.location.origin}/dress2.jpg`}
                   alt="Sale"
                 />
               </div>
               <div className="col-md-3">
                 <img
                   className="w-100"
-                  src="https://cdn.pixabay.com/photo/2015/07/24/18/38/model-858749_960_720.jpg"
+                  src={`${window.location.origin}/dress3.jpeg`}
                   alt="Sale"
                 />
               </div>
               <div className="col-md-3">
                 <img
                   className="w-100"
-                  src="https://cdn.pixabay.com/photo/2015/07/24/18/39/model-858751_960_720.jpg"
-                  alt="Sale"
-                />
-              </div>
-              <div className="col-md-3">
-                <img
-                  className="w-100"
-                  src="https://cdn.pixabay.com/photo/2015/07/24/18/37/model-858748_960_720.jpg"
+                  src={`${window.location.origin}/dress4.jpeg`}
                   alt="Sale"
                 />
               </div>
@@ -117,7 +116,7 @@ function ProductNightB() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default ProductNightB
+export default ProductNightB;

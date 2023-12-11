@@ -6,17 +6,17 @@ function ProductDayE() {
       <div class="card p-4">
         <div class="top d-flex flex-row align-items-center">
           <img
-            src="https://i.imgur.com/nUNhspp.jpg"
+            src={`${window.location.origin}/user1.jpg`}
             width="40"
             height="40"
             class="rounded-circle mr-2"
           />
-          <h6 class="mb-0 mr-2">Organics by LaMana</h6>
+          <h6 class="mb-0 mr-2">Organics by Prashant</h6>
           <i class="fa fa-opencart"></i>
         </div>
 
         <div class="d-flex justify-content-center flex-column">
-          <img src="https://i.imgur.com/b4nm7pc.png" width="100%" class="mt-3" />
+          <img src={`${window.location.origin}/pine.png`} width="100%" class="mt-3" />
           <h5>Pine Apple Green Packham</h5>
           <span>Each - approx 1.2KG</span>
         </div>

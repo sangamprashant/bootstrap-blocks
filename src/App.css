@@ -48,6 +48,9 @@ code {
 .nav_button_night {
   background-color: #13103e81;
 }
+.nav_button_day{
+  background-color: #e8e8e8;
+}
 .tablet-screen {
   border: none;
 }

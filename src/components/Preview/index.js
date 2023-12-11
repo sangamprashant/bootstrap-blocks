@@ -58,10 +58,37 @@ import OtpDayA from "./Otp/OtpDay/A";
 import OtpDayB from "./Otp/OtpDay/B";
 import OtpNightA from "./Otp/OtpNight/A";
 import OtpNightB from "./Otp/OtpNight/B";
+
 import PricingNightA from "./Pricing/PricingNight/A";
 import PricingDayA from "./Pricing/PricingDay/A";
 import PricingNightB from "./Pricing/PricingNight/B";
 import PricingDayB from "./Pricing/PricingDay/B";
+import PricingNightC from "./Pricing/PricingNight/C";
+import PricingDayC from "./Pricing/PricingDay/C";
+
+import ProductNightA from "./Product/ProductNight/A";
+import ProductDayA from "./Product/ProductDay/A";
+import ProductNightB from "./Product/ProductNight/B";
+import ProductDayB from "./Product/ProductDay/B";
+import ProductNightC from "./Product/ProductNight/C";
+import ProductDayC from "./Product/ProductDay/C";
+import ProductNightD from "./Product/ProductNight/D";
+import ProductDayD from "./Product/ProductDay/D";
+import ProductNightE from "./Product/ProductNight/E";
+import ProductDayE from "./Product/ProductDay/E";
+import ProductNightF from "./Product/ProductNight/F";
+import ProductDayF from "./Product/ProductDay/F";
+import ProductNightG from "./Product/ProductNight/G";
+import ProductDayG from "./Product/ProductDay/G";
+import ProductNightH from "./Product/ProductNight/H";
+import ProductDayH from "./Product/ProductDay/H";
+
+import TestimonialNightA from "./Testimonial/TestimonialNight/A";
+import TestimonialDAyA from "./Testimonial/TestimonialDay/A";
+import TestimonialNightB from "./Testimonial/TestimonialNight/B";
+import TestimonialDayB from "./Testimonial/TestimonialDay/B";
+import TestimonialNightC from "./Testimonial/TestimonialNight/C";
+import TestimonialDayC from "./Testimonial/TestimonialDay/C";
 
 export default function getPreview({ darkMode = false }) {
   return {
@@ -107,24 +134,26 @@ export default function getPreview({ darkMode = false }) {
       BannerB: darkMode ? <BannerNightB height="100" width="100%" /> : <BannerDayB  height="100" width="100%" />,
     },
     Pricing: {
+      //over
       PricingA: darkMode ? <PricingNightA height="100" width="100%" /> : <PricingDayA  height="100" width="100%" />,
       PricingB: darkMode ? <PricingNightB height="100" width="100%" /> : <PricingDayB  height="100" width="100%" />,
-      PricingC: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
+      PricingC: darkMode ? <PricingNightC height="100" width="100%" /> : <PricingDayC  height="100" width="100%" />,
     },
     Testimonial: {
-      TestimonialA: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
-      TestimonialB: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
-      TestimonialC: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
+      TestimonialA: darkMode ? <TestimonialNightA height="100" width="100%" /> : <TestimonialDAyA  height="100" width="100%" />,
+      TestimonialB: darkMode ? <TestimonialNightB height="100" width="100%" /> : <TestimonialDayB  height="100" width="100%" />,
+      TestimonialC: darkMode ? <TestimonialNightC height="100" width="100%" /> : <TestimonialDayC  height="100" width="100%" />,
     },
     Product: {
-      ProductA: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
-      ProductB: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
-      ProductC: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
-      ProductD: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
-      ProductE: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
-      ProductF: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
-      ProductG: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
-      ProductH: darkMode ? <HeroNightA height="100" width="100%" /> : <HeroDayA  height="100" width="100%" />,
+      //over
+      ProductA: darkMode ? <ProductNightA height="100" width="100%" /> : <ProductDayA  height="100" width="100%" />,
+      ProductB: darkMode ? <ProductNightB height="100" width="100%" /> : <ProductDayB  height="100" width="100%" />,
+      ProductC: darkMode ? <ProductNightC height="100" width="100%" /> : <ProductDayC  height="100" width="100%" />,
+      ProductD: darkMode ? <ProductNightD height="100" width="100%" /> : <ProductDayD  height="100" width="100%" />,
+      ProductE: darkMode ? <ProductNightE height="100" width="100%" /> : <ProductDayE  height="100" width="100%" />,
+      ProductF: darkMode ? <ProductNightF height="100" width="100%" /> : <ProductDayF  height="100" width="100%" />,
+      ProductG: darkMode ? <ProductNightG height="100" width="100%" /> : <ProductDayG  height="100" width="100%" />,
+      ProductH: darkMode ? <ProductNightH height="100" width="100%" /> : <ProductDayH  height="100" width="100%" />,
     },
     Otp: {
       //over

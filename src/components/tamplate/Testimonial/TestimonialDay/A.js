@@ -5,25 +5,22 @@ const testimonials = [
     {
       text:
         "At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.",
-      image:
-        "https://images.pexels.com/photos/6625914/pexels-photo-6625914.jpeg",
-      name: "Balbir Kaur",
+      image:`${window.location.origin}/user1.jpg`,
+      name: "Prashant Srivastav",
       position: "Student",
     },
     {
       text:
         "At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.",
-      image:
-        "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      name: "Balbir Kaur",
+      image:`${window.location.origin}/user1.jpg`,
+      name: "Prashant Srivastav",
       position: "Student",
     },
     {
       text:
         "At this School, our mission is to balance a rigorous comprehensive college preparatory curriculum with healthy social and emotional development.",
-      image:
-        "https://images.pexels.com/photos/4946604/pexels-photo-4946604.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      name: "Balbir Kaur",
+      image:`${window.location.origin}/user1.jpg`,
+      name: "Prashant Srivastav",
       position: "Student",
     },
   ];
