@@ -48,7 +48,7 @@ code {
 .nav_button_night {
   background-color: #13103e81;
 }
-.nav_button_day{
+.nav_button_day {
   background-color: #e8e8e8;
 }
 .tablet-screen {
@@ -98,7 +98,7 @@ code {
 }
 .top_nav {
   position: fixed;
-  background-color: #22668d;
+  background-color: var(--theme-color);
   height: 60px;
   z-index: 1;
 }
@@ -165,14 +165,14 @@ code {
 .right_content {
   padding-top: 100px;
 }
-.preview_container{
+.preview_container {
   display: flex;
   justify-content: center;
 }
 .prview_default {
- width: calc(100% - 190px);
+  width: calc(100% - 190px);
 }
-.prview_toggled{
+.prview_toggled {
   width: 100%;
 }
 
@@ -242,15 +242,34 @@ code {
   max-width: 576px;
 }
 
-
-.collorbtn{
+.collorbtn {
   border: 1px solid white;
   border-radius: 50px;
-  background-color: rgb(196, 196, 196);
+  background-color: rgb(146, 146, 146);
 }
 .collorbtn a {
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.options-active-theme,
+.options-active-theme:hover {
+  border: 2px solid rgb(11, 11, 94);
+}
+.options-not-active-theme,
+.options-not-active-theme:hover {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
 }

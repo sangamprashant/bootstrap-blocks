@@ -1,2 +1,2 @@
-import React, { createContext } from 'react';
-export const StyleContext = createContext()
+import { createContext } from "react";
+export const StyleContext = createContext();

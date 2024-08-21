@@ -1,164 +1,117 @@
+import BannerDayA from "./Banner/A";
+import BannerDayB from "./Banner/B";
 
-import BannerDayA from "./Banner/BannerDay/A";
-import BannerDayB from "./Banner/BannerDay/B";
-import BannerNightA from "./Banner/BannerNight/A";
-import BannerNightB from "./Banner/BannerNight/B";
+import ContactDayA from "./Contact/A";
 
-import ContactDayA from "./Contact/ContactDay/A";
-import ContactNightA from "./Contact/ContactNight/A";
+import EcommerceDayA from "./Ecommerce/A";
+import EcommerceDayB from "./Ecommerce/B";
+import EcommerceDayC from "./Ecommerce/C";
+import EcommerceDayD from "./Ecommerce/D";
+import EcommerceDayE from "./Ecommerce/E";
 
-import EcommerceDayA from "./Ecommerce/EcommerceDay/A";
-import EcommerceDayB from "./Ecommerce/EcommerceDay/B";
-import EcommerceDayC from "./Ecommerce/EcommerceDay/C";
-import EcommerceDayD from "./Ecommerce/EcommerceDay/D";
-import EcommerceDayE from "./Ecommerce/EcommerceDay/E";
-import EcommerceNightA from "./Ecommerce/EcommerceNight/A";
-import EcommerceNightB from "./Ecommerce/EcommerceNight/B";
-import EcommerceNightC from "./Ecommerce/EcommerceNight/C";
-import EcommerceNightD from "./Ecommerce/EcommerceNight/D";
-import EcommerceNightE from "./Ecommerce/EcommerceNight/E";
+import FooterDayA from "./Footer/A";
+import FooterDayB from "./Footer/B";
+import FooterDayC from "./Footer/C";
+import FooterDayD from "./Footer/D";
+import FooterDayE from "./Footer/E";
 
-import FooterDayA from "./Footer/FooterDay/A";
-import FooterDayB from "./Footer/FooterDay/B";
-import FooterDayC from "./Footer/FooterDay/C";
-import FooterDayD from "./Footer/FooterDay/D";
-import FooterDayE from "./Footer/FooterDay/E";
-import FooterDayF from "./Footer/FooterDay/F";
-import FooterNightA from "./Footer/FooterNight/A";
-import FooterNightB from "./Footer/FooterNight/B";
-import FooterNightC from "./Footer/FooterNight/C";
-import FooterNightD from "./Footer/FooterNight/D";
-import FooterNightE from "./Footer/FooterNight/E";
-import FooterNightF from "./Footer/FooterNight/F";
+import FormDayA from "./Form/A";
 
-import FormDayA from "./Form/FormDay/A";
-import FormNightA from "./Form/FormNight/A";
+import HeroDayA from "./Hero/A";
+import HeroDayB from "./Hero/B";
+import HeroDayC from "./Hero/C";
+import HeroDayD from "./Hero/D";
+import HeroDayE from "./Hero/E";
 
-import HeroDayA from "./Hero/HeroDay/A";
-import HeroDayB from "./Hero/HeroDay/B";
-import HeroDayC from "./Hero/HeroDay/C";
-import HeroDayD from "./Hero/HeroDay/D";
-import HeroDayE from "./Hero/HeroDay/E";
-import HeroDayF from "./Hero/HeroDay/F";
-import HeroNightA from "./Hero/HeroNight/A";
-import HeroNightB from "./Hero/HeroNight/B";
-import HeroNightC from "./Hero/HeroNight/C";
-import HeroNightD from "./Hero/HeroNight/D";
-import HeroNightE from "./Hero/HeroNight/E";
-import HeroNightF from "./Hero/HeroNight/F";
+import LogDayA from "./Log/A";
+import LogDayB from "./Log/B";
+import LogDayC from "./Log/C";
+import LogDayD from "./Log/D";
+import LogDayE from "./Log/E";
 
-import LogDayA from "./Log/LogDay/A";
-import LogDayB from "./Log/LogDay/B";
-import LogDayC from "./Log/LogDay/C";
-import LogDayD from "./Log/LogDay/D";
-import LogDayE from "./Log/LogDay/E";
-import LogNightA from "./Log/LogNight/A";
-import LogNightB from "./Log/LogNight/B";
-import LogNightC from "./Log/LogNight/C";
-import LogNightD from "./Log/LogNight/D";
-import LogNightE from "./Log/LogNight/E";
+import OtpDayA from "./Otp/A";
+import OtpDayB from "./Otp/B";
 
-import OtpDayA from "./Otp/OtpDay/A";
-import OtpDayB from "./Otp/OtpDay/B";
-import OtpNightA from "./Otp/OtpNight/A";
-import OtpNightB from "./Otp/OtpNight/B";
+import PricingDayA from "./Pricing/A";
+import PricingDayB from "./Pricing/B";
+import PricingDayC from "./Pricing/C";
 
-import PricingDayA from "./Pricing/PricingDay/A";
-import PricingDayB from "./Pricing/PricingDay/B";
-import PricingDayC from "./Pricing/PricingDay/C";
-import PricingNightA from "./Pricing/PricingNight/A";
-import PricingNightB from "./Pricing/PricingNight/B";
-import PricingNightC from "./Pricing/PricingNight/C";
+import ProductDayA from "./Product/A";
+import ProductDayB from "./Product/B";
+import ProductDayC from "./Product/C";
+import ProductDayD from "./Product/D";
+import ProductDayE from "./Product/E";
+import ProductDayF from "./Product/F";
+import ProductDayG from "./Product/G";
+import ProductDayH from "./Product/H";
 
-import ProductDayA from "./Product/ProductDay/A";
-import ProductDayB from "./Product/ProductDay/B";
-import ProductDayC from "./Product/ProductDay/C";
-import ProductDayD from "./Product/ProductDay/D";
-import ProductDayE from "./Product/ProductDay/E";
-import ProductDayF from "./Product/ProductDay/F";
-import ProductDayG from "./Product/ProductDay/G";
-import ProductDayH from "./Product/ProductDay/H";
-import ProductNightA from "./Product/ProductNight/A";
-import ProductNightB from "./Product/ProductNight/B";
-import ProductNightC from "./Product/ProductNight/C";
-import ProductNightD from "./Product/ProductNight/D";
-import ProductNightE from "./Product/ProductNight/E";
-import ProductNightF from "./Product/ProductNight/F";
-import ProductNightG from "./Product/ProductNight/G";
-import ProductNightH from "./Product/ProductNight/H";
+import TestimonialDayA from "./Testimonial/A";
+import TestimonialDayB from "./Testimonial/B";
+import TestimonialDayC from "./Testimonial/C";
 
-import TestimonialDayA from "./Testimonial/TestimonialDay/A";
-import TestimonialDayB from "./Testimonial/TestimonialDay/B";
-import TestimonialDayC from "./Testimonial/TestimonialDay/C";
-import TestimonialNightA from "./Testimonial/TestimonialNight/A";
-import TestimoniaLNightB from "./Testimonial/TestimonialNight/B";
-import TestimonialNightC from "./Testimonial/TestimonialNight/C";
-
-export default function getTemplate({ darkMode = false }) {
+export default function getTemplate() {
   return {
     Hero: {
-      HeroA: darkMode ? <HeroNightA /> : <HeroDayA />,
-      HeroB: darkMode ? <HeroNightB /> : <HeroDayB />,
-      HeroC: darkMode ? <HeroNightC /> : <HeroDayC />,
-      HeroD: darkMode ? <HeroNightD /> : <HeroDayD />,
-      HeroE: darkMode ? <HeroNightE /> : <HeroDayE />,
-      HeroF: darkMode ? <HeroNightF /> : <HeroDayF />,
+      HeroA: <HeroDayA />,
+      HeroB: <HeroDayB />,
+      HeroC: <HeroDayC />,
+      HeroD: <HeroDayD />,
+      HeroE: <HeroDayE />,
     },
     Footer: {
-      FooterA: darkMode ? <FooterNightA /> : <FooterDayA />,
-      FooterB: darkMode ? <FooterNightB /> : <FooterDayB />,
-      FooterC: darkMode ? <FooterNightC /> : <FooterDayC />,
-      FooterD: darkMode ? <FooterNightD /> : <FooterDayD />,
-      FooterE: darkMode ? <FooterNightE /> : <FooterDayE />,
-      FooterF: darkMode ? <FooterNightF /> : <FooterDayF />,
+      FooterA: <FooterDayA />,
+      FooterB: <FooterDayB />,
+      FooterC: <FooterDayC />,
+      FooterD: <FooterDayD />,
+      FooterE: <FooterDayE />,
     },
     Log: {
-      LogA: darkMode ? <LogNightA /> : <LogDayA />,
-      LogB: darkMode ? <LogNightB /> : <LogDayB />,
-      LogC: darkMode ? <LogNightC /> : <LogDayC />,
-      LogD: darkMode ? <LogNightD /> : <LogDayD />,
-      LogE: darkMode ? <LogNightE /> : <LogDayE />,
+      LogA: <LogDayA />,
+      LogB: <LogDayB />,
+      LogC: <LogDayC />,
+      LogD: <LogDayD />,
+      LogE: <LogDayE />,
     },
     Cart: {
-      EcommerceA: darkMode ? <EcommerceNightA />: <EcommerceDayA />,
-      EcommerceB: darkMode ? <EcommerceNightB />: <EcommerceDayB />,
-      EcommerceC: darkMode ? <EcommerceNightC />: <EcommerceDayC />,
-      EcommerceD: darkMode ? <EcommerceNightD />: <EcommerceDayD />,
-      EcommerceE: darkMode ? <EcommerceNightE />: <EcommerceDayE />,
+      EcommerceA: <EcommerceDayA />,
+      EcommerceB: <EcommerceDayB />,
+      EcommerceC: <EcommerceDayC />,
+      EcommerceD: <EcommerceDayD />,
+      EcommerceE: <EcommerceDayE />,
     },
     Contact: {
-      ContactA: darkMode ? <ContactNightA /> : <ContactDayA/>,
+      ContactA: <ContactDayA />,
     },
     Banner: {
-      BannerA: darkMode ? <BannerNightA /> : <BannerDayA/>,
-      BannerB: darkMode ? <BannerNightB /> : <BannerDayB/>,
+      BannerA: <BannerDayA />,
+      BannerB: <BannerDayB />,
     },
     Pricing: {
-      PricingA: darkMode ? <PricingNightA /> : <PricingDayA/>,
-      PricingB: darkMode ? <PricingNightB /> : <PricingDayB/>,
-      PricingC: darkMode ? <PricingNightC /> : <PricingDayC/>,
-    }, 
+      PricingA: <PricingDayA />,
+      PricingB: <PricingDayB />,
+      PricingC: <PricingDayC />,
+    },
     Testimonial: {
-      TestimonialA: darkMode ? <TestimonialNightA /> : <TestimonialDayA/>,
-      TestimonialB: darkMode ? <TestimoniaLNightB /> : <TestimonialDayB/>,
-      TestimonialC: darkMode ? <TestimonialNightC /> : <TestimonialDayC/>,
+      TestimonialA: <TestimonialDayA />,
+      TestimonialB: <TestimonialDayB />,
+      TestimonialC: <TestimonialDayC />,
     },
     Product: {
-      ProductA: darkMode ? <ProductNightA /> : <ProductDayA/>,
-      ProductB: darkMode ? <ProductNightB /> : <ProductDayB/>,
-      ProductC: darkMode ? <ProductNightC /> : <ProductDayC/>,
-      ProductD: darkMode ? <ProductNightD /> : <ProductDayD/>,
-      ProductE: darkMode ? <ProductNightE /> : <ProductDayE/>,
-      ProductF: darkMode ? <ProductNightF /> : <ProductDayF/>,
-      ProductG: darkMode ? <ProductNightG /> : <ProductDayG/>,
-      ProductH: darkMode ? <ProductNightH /> : <ProductDayH/>,
+      ProductA: <ProductDayA />,
+      ProductB: <ProductDayB />,
+      ProductC: <ProductDayC />,
+      ProductD: <ProductDayD />,
+      ProductE: <ProductDayE />,
+      ProductF: <ProductDayF />,
+      ProductG: <ProductDayG />,
+      ProductH: <ProductDayH />,
     },
     Otp: {
-      OtpA: darkMode ? <OtpNightA /> : <OtpDayA/>,
-      OtpB: darkMode ? <OtpNightB /> : <OtpDayB/>,
+      OtpA: <OtpDayA />,
+      OtpB: <OtpDayB />,
     },
     Form: {
-      FormA: darkMode ? <FormNightA /> : <FormDayA/>,
+      FormA: <FormDayA />,
     },
   };
 }
